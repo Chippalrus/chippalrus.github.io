@@ -89,18 +89,13 @@ h1,h2{display:inline-block;font-weight:400}
 	padding-top:0px;
 	opacity:0;
 }
-#H h1 a{padding:0 0px;font-size:40px;letter-spacing:3px;text-transform:uppercase;color:#222222}
+#H h1 a{padding:0 5px;font-size:40px;letter-spacing:3px;text-transform:uppercase;color:#222222}
 #H #D
 {
+	padding:0 0 5px 5px;
+	width:100%;
 	font-size:13px;color:rgba(34,34,34,.8);
-	text-align:right;
 }
-
-.h_image{float:left;padding-left:10px;}
-.h_image img{margin:auto;width:64px;height:64px;margin-right:4px;}
-.h_text{float:left;margin-top:14px;}
-.h_text #D span{margin-right:6px;}
-
 .X blockquote{padding-left:20px;border-left:3px solid rgba(51,51,51,.5);font-size:12px}
 .X img{max-width:100%;padding:2px;background:none;}
 .X video,.X audio{width:100%;max-width:100%;outline:none;border:none}
@@ -206,17 +201,17 @@ a.card
 	transform: perspective(800px) rotateY(0deg) scale(1.2) translateY(-10px);
 	z-index:1;
 }
-a.card img{margin-top:5px;width:22px;height:22px;opacity:1;padding:0;background:none!important;}
+a.card img{margin-top:9px;width:24px;height:24px;opacity:1;padding:0;background:none!important;}
 a.home_card img{margin:0% 0%;width:32px;height:32px;}
-a.card span{font-size:16px;font-weight:600;}
+a.card span{font-size:18px;font-weight:600;}
 a.card
 {
 	position: relative;
-    width: 47%;
-    height: 32px;
+    width: 100%;
+    height: 42px;
     margin: 5px;
 	margin-top:5px;margin-bottom:5px;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 15px 25px rgba(0,0,0,0.1);
     transition: 0.5s;
@@ -224,7 +219,7 @@ a.card
 a.card .circle
 {
 	float:left;
-    width: 34px;
+    width: 42px;
     height: 100%;
     background: #566 rgba(0,0,0,0.4);
     text-align: center;
@@ -235,7 +230,7 @@ a.card .content_txt
 	float:center;
     padding-top: 8px;
 	margin:auto;
-	margin-right:10px;
+	margin-right:20px;
     text-align: right;
 }
 
@@ -263,49 +258,47 @@ a.instagram_card:hover{color:#fff;background-color:rgb(177, 56, 147);}
 <body>
 	<div id="container">
 		<div id="FB" style="opacity: 1;">
+			<div class="image-i"></br>
+							<img src="img/profile/rogo_outline.png">
+			</div>
 			<div id="H" style="opacity: 1;">
-				<h1>
-				<div class="h_text">
-					<a href="https://chippalrus.ca/">Chippalrus</a>
-					<div id="D"><span>Zero discipline, all-purpose flour</span></div>
-				</div>
-				<div class="h_image"><img src="img/profile/logo_outline.png"></div>
-				</h1>
+				<h1><a href="https://chippalrus.ca/">Chippalrus</a></h1>
+				<div id="D">Zero discipline, all-purpose flour</div>
 			</div>
 			<div id="Z" style="opacity: 1;">
 				<div class="X" id="Single">
 					<div class="T">
 						<a class="card tumblr_card" href="https://dev.chippalrus.ca">
-							<div class="circle"><img style="margin-top:1px;margin-right:2px;width:30px;height:30px;" src="img/icons/64/tbr.png"></div>
-							<div class="content_txt"><span>DevLog</span></div>
+							<div class="circle"><img style="margin-top:5px;width:32px;height:32px;" src="img/icons/64/tbr.png"></div>
+							<div class="content_txt"><span>DevLog</span></br>dev.chippalrus.ca</div>
 						</a>
 						<a class="card twitter_card" href="https://twitter.com/Chippalrus">
 							<div class="circle"><img src="img/icons/64/twr_.png"></div>
-							<div class="content_txt"><span>Twitter</span></div>
+							<div class="content_txt"><span>Twitter</span><br/>@Chippalrus</div>
 						</a>
 						<a class="card youtube_card" href="https://www.youtube.com/user/chippalrus">
 							<div class="circle"><img src="img/icons/64/tyb_.png"></div>
-							<div class="content_txt"><span>Youtube</span></div>
+							<div class="content_txt"><span>Youtube</span><br/>@chippalrus</div>
 						</a>
 						<a class="card itchio_card" href="https://chippalrus.itch.io/">
 							<div class="circle"><img src="img/icons/64/itchio_.png"></div>
-							<div class="content_txt"><span>itch.io</span></div>
+							<div class="content_txt"><span>itch.io</span><br/>chippalrus.itch.io</div>
 						</a>
 						<a class="card unity_card" href="https://assetstore.unity.com/publishers/53124">
-							<div class="circle"><img style="margin-top:1px;width:32px;height:32px;" src="img/icons/64/unity.png"></div>
-							<div class="content_txt"><span>Asset Store</span></div>
+							<div class="circle"><img style="margin-top:5px;width:32px;height:32px;" src="img/icons/64/unity.png"></div>
+							<div class="content_txt"><span>Publisher</span><br/>/53124</div>
 						</a>
 						<a class="card github_card" href="https://github.com/Chippalrus">
 							<div class="circle"><img src="img/icons/64/github_.png"></div>
-							<div class="content_txt"><span>Github</span></div>
+							<div class="content_txt"><span>Github</span><br/>/Chippalrus</div>
 						</a>
 						<a class="card instagram_card" href="https://instagram.com/chippalrus">
 							<div class="circle"><img src="img/icons/64/inst_.png"></div>
-							<div class="content_txt"><span>Instagram</span></div>
+							<div class="content_txt"><span>Instagram</span><br/>@chippalrus</div>
 						</a>
 						<a class="card twitter_card" href="https://chippalrus.bsky.social">
 							<div class="circle"><img src="img/icons/64/bsky_.png"></div>
-							<div class="content_txt"><span>BlueSky</span></div>
+							<div class="content_txt"><span>BlueSky</span><br/>chippalrus.bsky.social</div>
 						</a>
 					</div>
 				</div>
