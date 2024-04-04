@@ -188,7 +188,6 @@ a.card
 	transform: perspective(800px) rotateY(0deg) scale(1.2) translateY(-10px);
 	z-index:1;
 }
-/*a.card img{margin:84% 2%;width:28px;height:28px;opacity:1;padding:0;background:none!important;}*/
 a.card img{margin-top:9px;width:24px;height:24px;opacity:1;padding:0;background:none!important;}
 a.home_card img{margin:0% 0%;width:32px;height:32px;}
 a.card span{font-size:18px;font-weight:600;}
@@ -209,7 +208,6 @@ a.card .circle
 	float:left;
     width: 42px;
     height: 100%;
-	/*margin-top:-75%;*/
     background: #566 rgba(0,0,0,0.4);
     text-align: center;
 }
@@ -217,12 +215,9 @@ a.card .circle
 a.card .content_txt
 {
 	float:center;
-	/*border-style: solid;border-width: 1px;*/
-	/*position: absolute;*/
     padding-top: 8px;
 	margin:auto;
 	margin-right:10px;
-    /*page-break-after: 20px;*/
     text-align: center;
 }
 
