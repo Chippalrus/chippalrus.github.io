@@ -70,7 +70,7 @@ h1,h2{display:inline-block;font-weight:400}
 #H
 {
 	margin:auto;
-	width:428px;
+	width:400px;
 	text-align: center;
 	padding-bottom:0px;
 	padding-top:0px;
@@ -149,12 +149,12 @@ a.instagram_btn:hover{color:#fff;background-color:rgb(177, 56, 147);}
 #Single .T
 {
 	position: relative;
-    padding: 10px;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-	width:96%;
+	width:100%;
 	margin:auto;
     transition: 0.5s;
 }
