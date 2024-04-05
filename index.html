@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html" charset="UTF-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>@chippalrus</title><meta name="author" content="Chippalrus">
+<title>Chippalrus</title><meta name="author" content="Chippalrus">
 <meta name="description" content="Zero discipline, all-purpose flour for digital interactive media.">
 <meta property="og:url" content="https://chippalrus.ca/" />
-<meta property="og:title" content=" index" />
+<meta property="og:title" content=" chippalrus.dev" />
 <meta property="og:description" content="Zero discipline, all-purpose flour for digital interactive media." />
 <meta property="og:site_name" content="Chippalrus" />
 <meta property="og:image" content="https://chippalrus.ca/%EB%8F%84img/profile/rogo2.png" />
@@ -54,7 +54,7 @@ a
 }
 a:hover{color:#cccccc}
 a.btn,a.card,a.twitter_btn,a.twitch_btn,a.unity_btn,a.itchio_btn,a.github_btn,a.instagram_btn,a.tumblr_btn,a.home_btn,a.youtube_btn,a.btn:hover,a.card:hover,a.twitter_btn:hover,a.twitch_btn:hover,a.unity_btn:hover,a.github_btn:hover,a.instagram_btn:hover,a.tumblr_btn:hover,a.home_btn:hover,a.youtube_btn:hover,a h2:not(.h2):hover,
-div.fp2,div.fp3,#blog-list:hover,#port-list:hover,#arch-list:hover,a,.NList.C a,.link span
+div.fp2,div.fp3,#blog-list:hover,#port-list:hover,#arch-list:hover,a,.link span
 {
 	-webkit-transition:all .2s ease;
 	-moz-transition:all .2s ease;
@@ -79,12 +79,12 @@ h1,h2
 {
 	display:inline-block;font-weight:400
 }
-.NList .P,.NList .M,#box .perma-cap,#box .D,ol.notes li.more_notes_link_container
+#box .perma-cap,#box .D,ol.notes li.more_notes_link_container
 {
 	background:#fafafa;
 	box-shadow:0 0 0 1px #eaeaea
 }
-.NList .T .question,.NList .T .source,#HTitle,h2,#P a,li.more_notes_link_container,li.more_notes_link_container a
+#HTitle,h2,#P a,li.more_notes_link_container,li.more_notes_link_container a
 {
 	font-family:Source Sans Pro
 }
@@ -100,7 +100,12 @@ h1,h2
 	0%{opacity: 1;}
 	100%{opacity: 0;}
 }
-#container{width:100%;margin:auto;-webkit-animation: contFadeIn 0.5s ease-in-out; animation: contFadeIn 0.5s ease-in-out;}
+#container
+{
+	width:100%;margin:auto;
+	-webkit-animation: contFadeIn 0.5s ease-in-out;
+	animation: contFadeIn 0.5s ease-in-out;
+}
 #FB
 {
 	margin:auto;
@@ -153,11 +158,7 @@ h1,h2
 .h_image img{margin:auto;width:64px;height:64px;margin-right:4px;}
 .h_text{float:left;margin-top:14px;}
 .h_text #D span{margin-right:6px;}
-
-.NList blockquote{padding-left:20px;border-left:3px solid rgba(51,51,51,.5);font-size:12px}
 .NList img{max-width:100%;padding:2px;background:none;}
-.NList video,.NList audio{width:100%;max-width:100%;outline:none;border:none}
-.NList embed,.NList iframe{width:440px;height:225px;outline:none;}
 
 table{border-top:1px solid #ccc;border-left:1px solid #ccc;width:100%;border-collapse:collapse;}
 th,td{border-bottom:1px solid #ccc;border-right:1px solid #ccc;padding:2px;}
@@ -217,7 +218,7 @@ a.instagram_btn:hover{color:#fff;background-color:rgb(177, 56, 147);}
 #h1,#h2{margin-top:15px}
 .close{font-size:28px;font-weight:bold;position:absolute;margin-top:-40px;right:-30px;text-align:center;top:40px;}
 
-#Single .T
+#Single .NItem
 {
 	position: relative;
     padding: 0px;
@@ -229,7 +230,7 @@ a.instagram_btn:hover{color:#fff;background-color:rgb(177, 56, 147);}
 	margin:auto;
     transition: 0.5s;
 }
-#Single .T .card:hover:nth-child(even)
+#Single .NItem .card:hover:nth-child(even)
 {
 	filter: blur(0px);
     opacity: 1;
@@ -237,7 +238,7 @@ a.instagram_btn:hover{color:#fff;background-color:rgb(177, 56, 147);}
 	box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 	transform: perspective(800px) rotateY(-27deg);
 }
-#Single .T .card:hover:nth-child(odd)
+#Single .NItem .card:hover:nth-child(odd)
 {
 	filter: blur(0px);
     opacity: 1;
@@ -254,7 +255,7 @@ a.card
 	line-height:14px;
 	vertical-align:middle;
 }
-#Single .T .card:hover
+#Single .NItem .card:hover
 {
 	transform: perspective(800px) rotateY(0deg) scale(1.2) translateY(-10px);
 	z-index:1;
@@ -327,7 +328,7 @@ a.instagram_card:hover{color:#fff;background-color:rgb(177, 56, 147);}
 			</div>
 			<div id="NGroup" style="opacity: 1;">
 				<div class="NList" id="Single">
-					<div class="T">
+					<div class="NItem">
 						<a class="card tumblr_card" href="https://dev.chippalrus.ca">
 							<div class="circle"><img style="margin-top:1px;margin-right:2px;width:30px;height:30px;" src="img/icons/64/tbr.png"></div>
 							<div class="content_txt"><span>DevLog</span></div>

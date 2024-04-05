@@ -281,7 +281,23 @@ a#DC{cursor:pointer;}
 	width:50%;
 	display:inline;
 }
-.masonry-brick{border-radius:24px;}
+.masonry-brick{border-radius:18px;}
+.masonry-brick:hover:nth-child(even)
+{
+    filter: blur(0px);
+    opacity: 1;
+	transform-style: preserve-3d;
+	box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+	transform: perspective(800px) rotateY(-27deg);
+}
+.masonry-brick:hover:nth-child(odd)
+{
+    filter: blur(0px);
+    opacity: 1;
+	transform-style: preserve-3d;
+	box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+	transform: perspective(800px) rotateY(27deg);
+}
 .masonry-brick img{width:100%;}
 .masonry-brick .T
 {
