@@ -13,6 +13,7 @@
 <meta name="color:Post Overlay Text" content="#ffffff"/>
 <meta name="color:Text" content="#555555"/>
 
+<meta name="if:3 Columns" content="0"/>
 <meta name="if:Front Background" content="1"/>
 <meta name="if:Grid" content="1"/>
 <meta name="if:Hover Options" content="1"/>
@@ -95,7 +96,7 @@
     font-style: normal;
 }
 
-#tumblr_controls{position:fixed;margin-right:99px;display:none;}
+#tumblr_controls{position:fixed;margin-right:99px;}
 body
 {
 	margin:0;
@@ -186,7 +187,11 @@ h4
 	{
 		position:fixed;
 		height:100%;
-		width:450px;
+		width:{block:ifgrid}
+				{block:if3columns}1140px;{/block:if3columns}
+				{block:ifnot3columns}780px;{/block:ifnot3columns}
+			  {/block:ifgrid}
+			  {block:ifnotgrid}790px;{/block:ifnotgrid}
 		margin-left:-20px;
 		background:{color:front background};
 		box-shadow:0 0 0 1px #eaeaea;
@@ -196,6 +201,11 @@ h4
 {/block:iffrontbackground}
 #container
 {
+	width:{block:ifgrid}
+			{block:if3columns}1100px;{/block:if3columns}
+			{block:ifnot3columns}740px;{/block:ifnot3columns}
+		  {/block:ifgrid}
+	      {block:ifnotgrid}750px;{/block:ifnotgrid}
 	margin:auto;
 	-webkit-animation: contFadeIn 0.5s ease-in-out;
 	animation: contFadeIn 0.5s ease-in-out;
@@ -255,9 +265,8 @@ a#DC{cursor:pointer;}
 }
 #Z
 {
-	margin:auto;
-	padding-top:20px;
-	width:1000px;
+	padding:30px 0px;
+	padding-left: 21px;
 	opacity:0;
 	text-align:center;
 }
@@ -272,7 +281,7 @@ a#DC{cursor:pointer;}
 	width:50%;
 	display:inline;
 }
-.masonry-brick{border-radius:8px;}
+.masonry-brick{border-radius:18px;}
 .masonry-brick:hover:nth-child(even)
 {
     filter: blur(0px);
@@ -293,7 +302,7 @@ a#DC{cursor:pointer;}
 .masonry-brick .T
 {
     margin:0px;
-    max-height:188px;
+    max-height: 240px;
     overflow:hidden;
     text-overflow:ellipsis;
 }
@@ -305,14 +314,12 @@ a#DC{cursor:pointer;}
 }
 .X
 {
-	{block:ifgrid}
-	{Block:Indexpage}
-		margin:0 6px 12px 6px;
-		width:188px;
-		max-height:188px;
+	{block:ifgrid}{Block:Indexpage}
+		margin:0 12px 24px 12px;
+		width:240px;
+		height:240px;
 		overflow:hidden;
-	{/Block:Indexpage}
-	{/block:ifgrid}
+	{/Block:Indexpage}{/block:ifgrid}
 	{block:ifnotgrid}
 		margin:20px auto 40px auto;
 		width:700px;
@@ -382,7 +389,7 @@ a#DC{cursor:pointer;}
 .P .T .post_body
 {
      {Block:Indexpage}
-     height:188px;
+     height:240px;
      {/Block:Indexpage}
 }
 .P .T .post_body img
@@ -523,7 +530,7 @@ a#DC{cursor:pointer;}
 		position:absolute;
 		{block:ifnotpostborder}
 			height:calc(100% -8.8px);
-			width:188px;
+			width:240px;
 		{/block:ifnotpostborder}
 		{block:ifpostborder}
 			width:(100% - 36px)px;
@@ -573,14 +580,14 @@ a#DC{cursor:pointer;}
 	    margin-bottom:0px;
 		position:absolute;
 		{block:ifnotpostborder}
-			width:188px;
+			width:240px;
 		{/block:ifnotpostborder}
 		{block:ifpostborder}
-			width:188px;
-			height:188px;
+			width:240px;
+			height:240px;
 			margin:7px;
 		{/block:ifpostborder}
-		padding:5px 0;
+		padding:10px 0;
 		bottom:0;
 		{block:ifnothoverreversed}
 			border-top:1px {select:photo divider} rgba({rgbcolor:post overlay text},.25);
@@ -593,9 +600,8 @@ a#DC{cursor:pointer;}
 	{
 		text-transform:uppercase;
 		text-align:center;
-		letter-spacing:1px;
+		letter-spacing:2px;
 		font-size:14px;
-		font-weight:600;
 		color:rgba({rgbcolor:post overlay text},.8);
 	}
 	.X .C a.left
@@ -608,7 +614,6 @@ a#DC{cursor:pointer;}
 		float:right;
 		margin-right:{block:ifnotpostborder}40px;{/block:ifnotpostborder}
 			         {block:ifpostborder}40px;{/block:ifpostborder}
-	    display:none;
 	}
 	.X .C a.Pset{letter-spacing:2px;}
 	.X .C a:hover{color:rgba({rgbcolor:post overlay text},1);}
@@ -651,7 +656,8 @@ a#DC{cursor:pointer;}
 {
 	position:absolute;
 	bottom:20px;
-	margin-left:529px;
+	margin-left:{block:if3columns}529px;{/block:if3columns}
+		        {block:ifnot3columns}349px;{/block:ifnot3columns}
 }
 #AL
 {
@@ -681,20 +687,17 @@ a#DC{cursor:pointer;}
 ::-webkit-scrollbar-thumb:vertical{background:rgba({rgbcolor:header text},.8);}
 ::-webkit-scrollbar-thumb:horizontal{background:rgba({rgbcolor:header text},.8);}
 {block:permalinkpage}
-	#Z
-	{
-    	margin:0;
-    	width:100%;
-    	padding:30px 0px;
-    	opacity:0;
-    	text-align:center;
-	}
+	#Z{margin:10px 0 0}
 	.X
 	{
 		{block:ifgrid}
+			{block:if3columns}
 				width:520px;
-				margin:auto;
-				position:relative;
+				float:left;
+			{block:if3columns}
+			{block:ifnot3columns}
+				width:700px;
+			{/block:ifnot3columns}
 		{/block:ifgrid}
 		{block:ifnotgrid}
 			width:700px
@@ -704,9 +707,15 @@ a#DC{cursor:pointer;}
 	#box
 	{
 		{block:ifgrid}
+			{block:if3columns}
 				width:460px;
+				float:right;
+			{/block:if3columns}
+			{block:ifnot3columns}
+				width:700px;
 				margin:auto;
-				position:relative;
+				margin-left:-15px;
+			{/block:ifnot3columns}
 		{/block:ifgrid}
 		{block:ifnotgrid}
 			width:700px;
@@ -738,7 +747,10 @@ a#DC{cursor:pointer;}
 	#box .D a.notes{border-left:0;}
 	ol.notes
 	{
-		width:{block:ifgrid}460px;{/block:ifgrid}
+		width:{block:ifgrid}
+				{block:if3columns}460px;{block:if3columns}
+				{block:ifnot3columns}700px;{/block:ifnot3columns}
+			  {/block:ifgrid}
 			  {block:ifnotgrid}700px;{/block:ifnotgrid}
 			  margin-left:-40px;
 	}
@@ -758,7 +770,10 @@ a#DC{cursor:pointer;}
 	}
 	ol.notes li.more_notes_link_container
 	{
-		width:{block:ifgrid}460px;{/block:ifgrid}
+		width:{block:ifgrid}
+				{block:if3columns}460px;{block:if3columns}
+				{block:ifnot3columns}700px;{/block:ifnot3columns}
+			  {/block:ifgrid}
 			  {block:ifnotgrid}700px;{/block:ifnotgrid}
 		margin:20px 0 70px;
 		padding:7px 0 9px;
@@ -964,10 +979,6 @@ div.fp1{width:100%;text-align:center}
 div.fp1 div.col1{width:100%;text-align:center;margin-left:auto;margin-right:auto;}
 .c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10{padding:0!important}
 div.fp1{margin-top:-10px;}
-
-@media only screen and (min-width: 800px) and (max-width: 999px){}
-@media only screen and (min-width: 600px) and (max-width: 799px){}
-@media only screen and (min-width: 375px) and (max-width: 599px){}
 </style></head><body>
 
 <div id="container">
@@ -1109,6 +1120,11 @@ div.fp1{margin-top:-10px;}
 							<div class="perma-cap">{Caption}</div>
 						{/block:Caption}
 						<div class="D"><a href="{permalink}" class="notes">{NoteCountWithLabel}</a>
+							{Block:ifgrid}
+								{Block:ifnot3columns}
+									<a href="{permalink}">{TimeAgo}</a>
+								{/Block:ifnot3columns}
+							{/Block:ifgrid}
 							{Block:ifnotgrid}
 								<a href="{permalink}">{TimeAgo}</a>
 							{/Block:ifnotgrid}
