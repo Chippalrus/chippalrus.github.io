@@ -63,7 +63,7 @@ export const profileConfig: ProfileConfig = {
     },
     {
       name: 'Bluesky',
-      icon: 'fa6-brands:bluesky',
+      icon: 'fa6-brands:twitter',
       url: 'https://chippalrus.bsky.social/',
     },
   ],
