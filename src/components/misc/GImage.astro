@@ -1,0 +1,45 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+type Props =
+{
+  src: string | ImageMetadata;
+  alt: string;
+};
+
+const props = Astro.props;
+const { src, alt } = Astro.props;
+---
+{
+  typeof src === 'string' ? (
+  <a href={'#img_'+alt} class="imgCRD hover:z-50">
+      <img class="aspect-square rounded-lg object-cover" {...props} />
+    </a>
+    <a href="#" id={'img_'+alt} class="hidden row-start-2 target:block top-0 left-0 bottom-0 right-0 md:target:z-50 col-start-1 row-end-1 col-span-full items-center">
+      <img class="imgEX" {...props} />
+    </a>
+  ) : (
+    <a href={'#img_'+alt} class="imgCRD hover:z-50">
+      <Image class="aspect-square rounded-lg object-cover" {...props} />
+    </a>
+    <a href="#" id={'img_'+alt} class="hidden row-start-2 target:block top-0 left-0 bottom-0 right-0 md:target:z-50 col-start-1 row-end-1 col-span-full items-center">
+      <Image class="imgEX" {...props} />
+    </a>
+  )
+}
+<style>
+.imgEX
+{
+  margin-left:auto;
+  margin-right:auto;
+}
+/*.imgCRD{filter: blur(2px);}*/
+.imgCRD:hover
+{
+  filter: blur(0px);
+	transform-style: preserve-3d;
+  transform: perspective(800px) rotateY(27deg);
+	box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+</style>

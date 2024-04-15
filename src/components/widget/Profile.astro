@@ -1,0 +1,81 @@
+---
+import { Icon } from 'astro-icon/components'
+import { profileConfig } from '../../config'
+import ImageWrapper from '../misc/ImageWrapper.astro'
+import {pathsEqual} from "@utils/url-utils";
+
+const config = profileConfig
+const isHomePage = pathsEqual(Astro.url.pathname, '/');
+---
+<div class="m-auto mt-[20px] card-base max-w-[400px]">
+    <button aria-label="Light/Dark Mode" class="float-left ml-1 mt-1 btn-plain h-8 w-8 rounded-lg active:scale-90" id="scheme-switch">
+        <Icon name="material-symbols:wb-sunny-outline-rounded" size={"1.25rem"} class="absolute opacity-[var(--display-light-icon)]"></Icon>
+        <Icon name="material-symbols:dark-mode-outline-rounded" size={"1.25rem"} class="absolute opacity-[var(--display-dark-icon)]"></Icon>
+    </button>
+    <div class="flex flex-row-reverse ml-7 mx-auto justify-center items-center">
+        <a aria-label="Go to About Page" href="/about" class="group block relative my-3 max-w-none overflow-hidden rounded-xl active:scale-95">
+            <div class="absolute transition pointer-events-none group-hover:bg-black/30 group-active:bg-black/50 z-50 flex w-full h-full items-center justify-center">
+                <Icon name="fa6-regular:address-card" class="transition opacity-0 group-hover:opacity-100 text-white text-5xl"></Icon>
+            </div>
+            <ImageWrapper src={config.avatar} alt="Profile Image of the Author" class="mx-auto w-[120px] h-[120px] "></ImageWrapper>
+        </a>
+        <div class="text-xl text-right mt-6 mb-1 ml-[-16px] mr-[3px] dark:text-neutral-50 transition">
+            <a href="/"><div class="uppercase text-[32px]" style="letter-spacing:6px; font-family:'Source Sans Pro';">{config.name}</div></a>
+            <div class="mr-1 text-[12px] flex-none text-sm text-right text-neutral-400 mb-2.5 transition">{config.bio}</div>
+        </div>
+    </div>
+    <div class="flex gap-2 mx-3 mb-3 justify-center opacity-100" class:list={[{"is-home hidden mx-0 mb-0 gap-0 max-h-[0px]": isHomePage}]}>
+        {config.links.map(item =>
+            <a aria-label={item.name} href={item.url} class:list=
+                    {item.name + "_btn link-card btn-regular rounded-lg h-10 w-10 active:scale-90"}>
+                <Icon name={item.icon} size="1.5rem"></Icon>
+            </a>
+        )}
+    </div>
+</div>
+
+<style>
+	.link-card
+	{
+		color:white;
+		background-color:#004697;
+		transition: 0.3s;
+	}
+	.link-card:hover
+	{
+		color:white;
+		background-color:#1d2e3f;
+		transform-style: preserve-3d;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+	}
+	.link-card:hover:nth-child(even)
+	{
+		transform: perspective(800px) rotateY(-27deg);
+	}
+	.link-card:hover:nth-child(odd)
+	{
+		transform: perspective(800px) rotateY(27deg);
+	}
+	
+	a.Home_btn{color:#fff;background-color:#004697;}
+	a.Youtube_btn{color:#fff;background-color:#004697;}
+	a.Twitter_btn{color:#fff;background-color:#004697;}
+	a.Twitch_btn{color:#fff;background-color:#004697;}
+	a.Unity_btn{color:#fff;background-color:#004697;}
+	a.Github_btn{color:#fff;background-color:#004697;}
+	a.Itch-io_btn{color:#fff;background-color:#004697;}
+	a.Tumblr_btn{color:#fff;background-color:#004697;}
+	a.Instagram_btn{color:#fff;background-color:#004697;}
+	a.Bluesky_btn{color:#fff;background-color:#004697;}
+	
+	a.Home_btn:hover{color:#fff;background-color:#1d2e3f;}
+	a.Youtube_btn:hover{color:#fff;background-color:#f70000;}
+	a.Twitter_btn:hover{color:#fff;background-color:#1DA1F2;}
+	a.Twitch_btn:hover{color:#fff;background-color:#6441a5;}
+	a.Unity_btn:hover{color:#fff;background-color:#000;}
+	a.Github_btn:hover{color:#fff;background-color:#000;}
+	a.Itch-io_btn:hover{color:#fff;background-color:#fa5c5c;}
+	a.Tumblr_btn:hover{color:#fff;background-color:#1d2e3f;}
+	a.Instagram_btn:hover{color:#fff;background-color:rgb(177, 56, 147);}
+	a.Bluesky_btn:hover{color:#fff;background-color:#1DA1F2;}
+	</style>

@@ -1,0 +1,22 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+type Props =
+{
+  src: string | ImageMetadata;
+  alt: string;
+};
+
+const props = Astro.props;
+const { src, alt } = Astro.props;
+---
+{
+  typeof src === 'string' ?
+  (
+    <figure class="mx-auto w-[500px]"><a href={src.src} target="_blank"><Image {...props} alt={alt} /></a></figure>
+  ) : 
+  (
+    <figure class="mx-auto w-[500px]"><a href={src.src} target="_blank"><Image {...props} alt={alt} /></a></figure>
+  )
+}
