@@ -28,7 +28,6 @@ export default defineConfig({
   site: "https://chippalrus.ca",
   base: "/",
   integrations: [
-    relativeLinks(),
     mdx(),
     tailwind(),
     swup({
