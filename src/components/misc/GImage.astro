@@ -13,19 +13,15 @@ const { src, alt } = Astro.props;
 ---
 {
   typeof src === 'string' ? (
-  <a href={'#img_'+alt} class="imgCRD hover:z-50">
-      <img class="aspect-square rounded-lg object-cover" {...props} />
-    </a>
-    <a href="#" id={'img_'+alt} class="hidden row-start-2 target:block top-0 left-0 bottom-0 right-0 md:target:z-50 col-start-1 row-end-1 col-span-full items-center">
+    <img class:list={'img-'+alt} class="imgCRD hover:z-50 aspect-square rounded-lg object-cover" {...props} />
+    <figure class:list={'img_'+alt} class="imgFigs transition-fade hidden row-start-2 top-0 left-0 bottom-0 right-0 md:target:z-50 col-start-1 row-end-1 col-span-full items-center">
       <img class="imgEX" {...props} />
-    </a>
+    </figure>
   ) : (
-    <a href={'#img_'+alt} class="imgCRD hover:z-50">
-      <Image class="aspect-square rounded-lg object-cover" {...props} />
-    </a>
-    <a href="#" id={'img_'+alt} class="hidden row-start-2 target:block top-0 left-0 bottom-0 right-0 md:target:z-50 col-start-1 row-end-1 col-span-full items-center">
+    <Image class:list={'img-'+alt} class="imgCRD hover:z-50 aspect-square rounded-lg object-cover" {...props} />
+    <figure class:list={'img_'+alt} class="imgFigs transition-fade hidden row-start-2 top-0 left-0 bottom-0 right-0 md:target:z-50 col-start-1 row-end-1 col-span-full items-center">
       <Image class="imgEX" {...props} />
-    </a>
+    </figure>
   )
 }
 <style>
@@ -42,4 +38,18 @@ const { src, alt } = Astro.props;
   transform: perspective(800px) rotateY(27deg);
 	box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
+.activeIMG
+{
+  display:block;
+}
 </style>
+<script define:vars={{ alt }}>
+  const elemImg = document.querySelector( `.img-${alt}` );
+  const elemFig = document.querySelector( `.img_${alt}` );
+  elemImg.addEventListener('click', () => 
+  { 
+    const actIMG = document.querySelector( '.activeIMG' );
+    if( actIMG != null ){ actIMG.classList.remove( 'activeIMG' ); }
+    elemFig.classList.add( 'activeIMG' );
+  });
+</script>

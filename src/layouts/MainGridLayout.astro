@@ -8,6 +8,7 @@ import Profile from '@components/widget/Profile.astro'
 import { pathsEqual } from '@utils/url-utils'
 import { Icon } from 'astro-icon/components'
 import Layout from './Layout.astro'
+import { profileConfig } from '../config'
 
 interface Props {
   title: string
@@ -17,6 +18,7 @@ interface Props {
 const { title, banner } = Astro.props
 const isHomePage = pathsEqual(Astro.url.pathname, '/')
 const enableBanner = siteConfig.banner.enable
+const config = profileConfig
 ---
 
 <Layout title={title} banner={banner}>
@@ -35,6 +37,14 @@ const enableBanner = siteConfig.banner.enable
     <!--SideBar class="row-start-3 row-end-4 col-span-2 lg:row-start-2 lg:row-end-3 lg:col-span-1 lg:max-w-[17.5rem] onload-animation"></SideBar-->
 
     <div id="content-wrapper" class="row-start-2 col-span-3 overflow-hidden onload-animation">
+        <div class="_nav flex gap-2 mx-3 mb-3 justify-center visible onload-animation" class:list={[{"hidden": isHomePage}]}>
+            {config.links.map(item =>
+                <a aria-label={item.name} href={item.url} class:list=
+                        {item.name + "_btn link-card btn-regular rounded-lg h-9 w-9 active:scale-90"}>
+                    <Icon name={item.icon} size="1.5rem"></Icon>
+                </a>
+            )}
+        </div>
         <!-- the overflow-hidden here prevent long text break the layout-->
         <main id="swup" class="transition-fade">
             <slot></slot>
