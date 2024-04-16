@@ -24,14 +24,14 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
             <div class="mr-1 text-[12px] flex-none text-sm text-right text-neutral-400 mb-2.5 transition">{config.bio}</div>
         </div>
     </div>
-    <!--div class="onload-animation flex gap-2 mx-3 mb-3 justify-center sm:visible md:hidden" class:list={[{"hidden": isHomePage}]} >
-        {config.links.map(item =>
-            <a aria-label={item.name} href={item.url} class:list=
-                    {item.name + "_btn link-card btn-regular rounded-lg h-7 w-7 active:scale-90"}>
-                <Icon name={item.icon} size="1.1rem"></Icon>
-            </a>
-        )}
-    </div-->
+    <!--div class="_nav flex gap-2 mx-3 mb-3 justify-center onload-animation" class:list={[{"hidden": isHomePage}]}>
+		{config.links.map(item =>
+			<a aria-label={item.name} href={item.url} class:list=
+					{item.name + "_btn link-card btn-regular rounded-lg h-9 w-9 active:scale-90"}>
+				<Icon name={item.icon} size="1.5rem"></Icon>
+			</a>
+		)}
+	</div-->
 </div>
 
 <style>

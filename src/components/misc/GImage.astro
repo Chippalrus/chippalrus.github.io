@@ -43,7 +43,7 @@ const { src, alt } = Astro.props;
   display:block;
 }
 </style>
-<script define:vars={{ alt }}>
+<script define:vars={{ alt }} is:inline>
   const elemImg = document.querySelector( `.img-${alt}` );
   const elemFig = document.querySelector( `.img_${alt}` );
   elemImg.addEventListener('click', () => 
