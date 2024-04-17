@@ -13,7 +13,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
         <Icon name="material-symbols:dark-mode-outline-rounded" size={"1.25rem"} class="absolute opacity-[var(--display-dark-icon)]"></Icon>
     </button>
     <div class="flex flex-row-reverse ml-7 mx-auto justify-center items-center">
-        <a aria-label="Go to About Page" href="/about" class="_PostPage group block relative my-3 max-w-none overflow-hidden rounded-xl active:scale-95">
+        <a aria-label="Go to About Page" href="/about/" class="_PostPage group block relative my-3 max-w-none overflow-hidden rounded-xl active:scale-95">
             <div class="absolute transition pointer-events-none group-hover:bg-black/30 group-active:bg-black/50 z-50 flex w-full h-full items-center justify-center">
                 <Icon name="fa6-regular:address-card" class="transition opacity-0 group-hover:opacity-100 text-white text-5xl"></Icon>
             </div>
@@ -33,32 +33,6 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
 		)}
 	</div>
 </div>
-<script define:vars={{isHomePage}}>
-	const eHomeNav	= document.querySelector( `._idx` );
-	if( eHomeNav != null )
-	{
-		eHomeNav.addEventListener
-		(	'click'
-		,	() =>
-		{ 
-			const eNav		= document.querySelector( '._nav' );
-			if( eNav != null ){ eNav.classList.add( 'hidden' ); }
-		});
-	}
-</script>
-<script define:vars={{isHomePage}}>
-	const pgNav	= document.querySelector( `._PostPage` );
-	if( pgNav != null )
-	{
-		pgNav.addEventListener
-		(	'click'
-		,	() =>
-		{ 
-			const eNav		= document.querySelector( '._nav' );
-			if( eNav != null ){ eNav.classList.remove( 'hidden' ); }
-		});
-	}
-</script>
 <style>
 .link-card
 {

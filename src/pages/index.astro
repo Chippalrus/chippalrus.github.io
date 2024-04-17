@@ -34,20 +34,6 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
         </div>
     </div>
 </MainGridLayout>
-<script define:vars={{isHomePage}}>
-	const ePageNav	= document.querySelector( `._PostsPG` );
-	if( ePageNav != null )
-	{
-		ePageNav.addEventListener
-		(	'click'
-		,	() =>
-		{ 
-			//console.log('idx Btn Clicked');
-			const eNav		= document.querySelector( '._nav' );
-			if( eNav != null ){ eNav.classList.remove( 'hidden' ); }
-		});
-	}
-</script>
 <style>
 	.link-card
 	{
