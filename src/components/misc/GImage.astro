@@ -18,31 +18,12 @@ const { src, alt } = Astro.props;
       <img class="imgEX" {...props} />
     </figure>
   ) : (
-    <a href={'#img_' + alt}><Image class:list={'img-'+alt} class="imgCRD hover:z-50 aspect-square rounded-lg object-cover" {...props} /></a>
-    <figure id={'img_' + alt} class:list={'img_'+alt} class="imgFigs z-0 md:target:z-50 transition-fade row-start-2 top-0 left-0 bottom-0 right-0 col-start-1 row-end-1 col-span-full items-center onload-animation">
+    <a href={'#img_' + alt}><Image class:list={'img-'+alt} class="imgCRD hover:z-50 aspect-square rounded-2xl object-cover" {...props} /></a>
+    <div id={'img_' + alt} class:list={'img_'+alt} class="imgFigs hidden transition-fade row-start-2 top-0 left-0 bottom-0 right-0 col-start-1 row-end-1 col-span-full items-center onload-animation">
       <Image class="imgEX" {...props} />
-    </figure>
+    </div>
   )
 }
-<style>
-.imgEX
-{
-  margin-left:auto;
-  margin-right:auto;
-}
-/*.imgCRD{filter: blur(2px);}*/
-.imgCRD:hover
-{
-  filter: blur(0px);
-	transform-style: preserve-3d;
-  transform: perspective(800px) rotateY(27deg);
-	box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-}
-.activeIMG
-{
-  display:block;
-}
-</style>
 <script define:vars={{alt}}>
   const eImg = document.querySelector( `.img-${alt}` );
   const eFig = document.querySelector( `.img_${alt}` );
@@ -56,11 +37,27 @@ const { src, alt } = Astro.props;
       if( null != actIMG )
       {
         actIMG.classList.remove( 'activeIMG' );
-        actIMG.classList.add( 'hidden' );
       }
-      
+
       eFig.classList.add( 'activeIMG' );
-      eFig.classList.remove( 'hidden' );
     });
   }
 </script>
+<style>
+.imgEX
+{
+  margin-left:auto;
+  margin-right:auto;
+}
+.imgCRD:hover
+{
+  filter: blur(0px);
+	transform-style: preserve-3d;
+  transform: perspective(800px) rotateY(27deg);
+	box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+.activeIMG
+{
+  display:block!important;
+}
+</style>
