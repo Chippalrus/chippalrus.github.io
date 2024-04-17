@@ -1,7 +1,7 @@
 <div class="transition-fade mx-auto grid gap-2 justify-center items-center grid-cols-[repeat(auto-fit,_24%)]">
     <slot />
 </div>
-<script>
+<script client:only>
 const eCRD = document.querySelectorAll( '.imgCRD' );
 const eFigs = document.querySelectorAll( '.imgFigs' );
 eCRD.forEach( eLink =>
