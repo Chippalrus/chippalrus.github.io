@@ -4,19 +4,24 @@
 <script client:only>
 const eCRD = document.querySelectorAll( '.imgCRD' );
 const eFigs = document.querySelectorAll( '.imgFigs' );
-eCRD.forEach( eLink =>
+if( eCRD.length > 0 )
 {
-    eLink.addEventListener( 'click', () =>
+    eCRD.forEach( eLink =>
     {
-        
-        eFigs.forEach( eImg =>
+        eLink.addEventListener( 'click', () =>
         {
-            if( eLink.classList[ 0 ] === eImg.classList[ 0 ] )
+            if( eFigs.length > 0 )
             {
-                eImg.classList.add( 'activeIMG' );
-            } else { eImg.classList.remove( 'activeIMG' ); }
+                eFigs.forEach( eImg =>
+                {
+                    if( eLink.classList[ 0 ] === eImg.classList[ 0 ] )
+                    {
+                        eImg.classList.add( 'activeIMG' );
+                    } else { eImg.classList.remove( 'activeIMG' ); }
 
+                });
+            }
         });
     });
-});
+}
 </script>

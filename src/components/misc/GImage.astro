@@ -18,28 +18,28 @@ const { src, alt } = Astro.props;
       <img class="imgEX" {...props} />
     </figure>
   ) : (
-    <a href={'#img_' + alt}><Image class:list={'img_' + alt + ' imgCRD hover:z-50 aspect-square rounded-2xl object-cover'} {...props} /></a>
+  <a href={'#img_' + alt}><Image class:list={'img_' + alt + ' imgCRD hover:z-50 aspect-square rounded-2xl object-cover'} {...props} /></a>
     <div id={'img_' + alt} class:list={'img_' + alt + ' imgFigs hidden row-start-2 top-0 left-0 bottom-0 right-0 col-start-1 row-end-1 col-span-full items-center onload-animation'}>
       <Image class="imgEX" {...props} />
     </div>
   )
 }
 <style>
-  .imgEX
-  {
-    margin-left:auto;
-    margin-right:auto;
-  }
-  .imgCRD{transition: 0.3s;}
-  .imgCRD:hover
-  {
-    filter: blur(0px);
-    transform-style: preserve-3d;
-    transform: perspective(800px) rotateY(27deg);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-  }
-  .activeIMG
-  {
-    display:block!important;
-  }
+.imgEX
+{
+  margin-left:auto;
+  margin-right:auto;
+}
+.imgCRD{transition: 0.3s;}
+.imgCRD:hover
+{
+  filter: blur(0px);
+  transform-style: preserve-3d;
+  transform: perspective(800px) rotateY(27deg);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+.activeIMG
+{
+  display:block!important;
+}
 </style>
