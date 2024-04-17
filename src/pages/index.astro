@@ -24,7 +24,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
             <Markdown class="mt-2 grid grid-cols-2 gap-5 mb-[10px]">
                 {config.links.map(item =>
                     <a aria-label={item.name} href={item.url} class:list=
-                    {item.name + "_btn link-card _cardBtn !no-underline px-[10px] grid grid-cols-2 grid-row-1 justify-center items-center"}>
+                    {item.name + "_btn link-card _PostsPG !no-underline px-[10px] grid grid-cols-2 grid-row-1 justify-center items-center"}>
                         <Icon name={item.icon} size="1.5rem" class="mx-[5px] col-start-1"></Icon>
                         <span class="mr-[5px] col-start-2 text-right font-extrabold">{item.name}</span>
                     </a>
@@ -34,7 +34,20 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
         </div>
     </div>
 </MainGridLayout>
-
+<script define:vars={{isHomePage}}>
+	const ePageNav	= document.querySelector( `._PostsPG` );
+	if( ePageNav != null )
+	{
+		ePageNav.addEventListener
+		(	'click'
+		,	() =>
+		{ 
+			//console.log('idx Btn Clicked');
+			const eNav		= document.querySelector( '._nav' );
+			if( eNav != null ){ eNav.classList.remove( 'hidden' ); }
+		});
+	}
+</script>
 <style>
 	.link-card
 	{
@@ -80,12 +93,3 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
 	a.Instagram_btn:hover{color:#fff;background-color:rgb(177, 56, 147);}
 	a.Bluesky_btn:hover{color:#fff;background-color:#1DA1F2;}
 	</style>
-<script define:vars={{isHomePage}}>
-	const elemBTN = document.querySelector( `._cardBtn` );
-	elemBTN.addEventListener('click', () => 
-	{
-		const actNAV = document.querySelector( '._nav' );
-		if( actNAV != null ){ actNAV.classList.remove( 'hidden' ); }
-		//else{ actNAV.classList.add( 'hidden' ); }
-	});
-</script>

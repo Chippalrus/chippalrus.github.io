@@ -44,12 +44,17 @@ const { src, alt } = Astro.props;
 }
 </style>
 <script define:vars={{ alt }}>
-  const elemImg = document.querySelector( `.img-${alt}` );
-  const elemFig = document.querySelector( `.img_${alt}` );
-  elemImg.addEventListener('click', () => 
-  { 
-    const actIMG = document.querySelector( '.activeIMG' );
-    if( actIMG != null ){ actIMG.classList.remove( 'activeIMG' ); }
-    elemFig.classList.add( 'activeIMG' );
-  });
+  const eImg = document.querySelector( `.img-${alt}` );
+  const eFig = document.querySelector( `.img_${alt}` );
+  if( eImg != null )
+  {
+    eImg.addEventListener
+    ( 'click'
+    , () => 
+    { 
+      const actIMG = document.querySelector( '.activeIMG' );
+      if( actIMG != null ){ actIMG.classList.remove( 'activeIMG' ); }
+      if( eFig != null ){ eFig.classList.add( 'activeIMG' ); }
+    });
+  }
 </script>
