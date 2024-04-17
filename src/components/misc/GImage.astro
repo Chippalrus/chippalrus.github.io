@@ -18,8 +18,8 @@ const { src, alt } = Astro.props;
       <img class="imgEX" {...props} />
     </figure>
   ) : (
-  <a href={'#img_' + alt}><Image class:list={'img_' + alt + ' imgCRD hover:z-50 aspect-square rounded-2xl object-cover'} {...props} /></a>
-    <div id={'img_' + alt} class:list={'img_' + alt + ' imgFigs hidden row-start-2 top-0 left-0 bottom-0 right-0 col-start-1 row-end-1 col-span-full items-center onload-animation'}>
+  <a href={'#img_' + alt}><Image class:list={'img-' + alt + ' imgCRD hover:z-50 aspect-square rounded-2xl object-cover'} {...props} /></a>
+    <div id={'img_' + alt} class:list={'img_' + alt + ' imgFigs hidden target:block row-start-2 top-0 left-0 bottom-0 right-0 col-start-1 row-end-1 col-span-full items-center onload-animation'}>
       <Image class="imgEX" {...props} />
     </div>
   )
@@ -43,3 +43,19 @@ const { src, alt } = Astro.props;
   display:block!important;
 }
 </style>
+<script define:vars={{alt}}>
+  const eImg = document.querySelector( `.img-${alt}` );
+  if( null != eImg )
+  {
+    eImg.addEventListener
+    ( 'click'
+    , () => 
+    { 
+      const actIMG = document.querySelector( '.activeIMG' );
+      if( null != actIMG ){ actIMG.classList.remove( 'activeIMG' ); }
+
+      const eFig = document.querySelector( `.img_${alt}` );
+      if( null != eFig ){ eFig.classList.add( 'activeIMG' ); }
+    });
+  }
+</script>
