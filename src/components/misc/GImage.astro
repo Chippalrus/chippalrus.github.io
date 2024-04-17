@@ -18,8 +18,8 @@ const { src, alt } = Astro.props;
       <img class="imgEX" {...props} />
     </figure>
   ) : (
-    <Image class:list={'img-'+alt} class="imgCRD hover:z-50 aspect-square rounded-lg object-cover" {...props} />
-    <figure class:list={'img_'+alt} class="imgFigs transition-fade hidden row-start-2 top-0 left-0 bottom-0 right-0 md:target:z-50 col-start-1 row-end-1 col-span-full items-center onload-animation">
+    <a href={'#img_' + alt}><Image class:list={'img-'+alt} class="imgCRD hover:z-50 aspect-square rounded-lg object-cover" {...props} /></a>
+    <figure id={'img_' + alt} class:list={'img_'+alt} class="imgFigs z-0 md:target:z-50 transition-fade row-start-2 top-0 left-0 bottom-0 right-0 col-start-1 row-end-1 col-span-full items-center onload-animation">
       <Image class="imgEX" {...props} />
     </figure>
   )
@@ -46,15 +46,21 @@ const { src, alt } = Astro.props;
 <script define:vars={{alt}}>
   const eImg = document.querySelector( `.img-${alt}` );
   const eFig = document.querySelector( `.img_${alt}` );
-  if( eImg != null )
+  if( null != eImg && null != eFig )
   {
     eImg.addEventListener
     ( 'click'
     , () => 
     { 
       const actIMG = document.querySelector( '.activeIMG' );
-      if( actIMG != null ){ actIMG.classList.remove( 'activeIMG' ); }
-      if( eFig != null ){ eFig.classList.add( 'activeIMG' ); }
+      if( null != actIMG )
+      {
+        actIMG.classList.remove( 'activeIMG' );
+        actIMG.classList.add( 'hidden' );
+      }
+      
+      eFig.classList.add( 'activeIMG' );
+      eFig.classList.remove( 'hidden' );
     });
   }
 </script>
