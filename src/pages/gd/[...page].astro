@@ -1,0 +1,33 @@
+---
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import PostCardGrid from "@components/PostCardGrid.astro";
+import Pagination from "@components/control/Pagination.astro";
+import {getSortedPosts} from "@/utils/content-utils";
+import {getPostUrlBySlug} from "@utils/url-utils";
+import {PAGE_SIZE} from "@constants/constants";
+import PostPageGrid from "@components/PostPageGrid.astro";
+
+export async function getStaticPaths({ paginate }) {
+    const allBlogPosts = await getSortedPosts();
+    const rebuildPosts = new Array();
+    allBlogPosts.map( post =>
+    {
+        post.data.tags.map( ( tag: string ) =>
+        {
+            if( tag == 'gd' )
+            {
+                rebuildPosts.push( post );
+            }
+        });
+    });
+    return paginate(rebuildPosts, { pageSize: PAGE_SIZE - 1 });
+}
+
+const {page} = Astro.props;
+const len = page.data.length;
+
+---
+<MainGridLayout title="Graphic Design">
+    <PostPageGrid page={page}></PostPageGrid>
+    <Pagination class="mx-auto onload-animation" page={page} name='gd/' style=`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`></Pagination>
+</MainGridLayout>

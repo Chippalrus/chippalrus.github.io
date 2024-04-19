@@ -3,8 +3,8 @@ title: Playlist P
 published: 2024-04-07
 description: 'A very basic playlist player with basic functions'
 image: '2.png'
-tags: [Audio, Asset-Store]
-category: 'Unity Projects'
+tags: [unity, audio]
+category: 'assets'
 draft: false 
 ---
 A very basic playlist player with basic functionalities.

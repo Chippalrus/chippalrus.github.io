@@ -67,6 +67,28 @@ export const profileConfig: ProfileConfig = {
       url: 'https://chippalrus.bsky.social/',
     },
   ],
+  page_links: [
+    {
+      name: 'Unity Assets',
+      icon: 'fa6-brands:unity',
+      url: '/unity/assets/',
+    },
+    {
+      name: 'Logo Design',
+      icon: 'chippalrus_w',
+      url: '/gd/logos/',
+    },
+    {
+      name: 'Work in progress',
+      icon: 'material-symbols:construction',
+      url: '/wip/',
+    },
+    {
+      name: 'All Posts',
+      icon: 'material-symbols:menu-rounded',
+      url: '/posts/',
+    },
+  ],
 }
 
 export const licenseConfig: LicenseConfig = {

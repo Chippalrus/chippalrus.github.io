@@ -36,6 +36,11 @@ export type ProfileConfig = {
     url: string
     icon: string
   }[]
+  page_links: {
+    name: string
+    url: string
+    icon: string
+  }[]
 }
 
 export type LicenseConfig = {

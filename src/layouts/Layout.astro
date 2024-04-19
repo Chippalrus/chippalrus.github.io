@@ -87,7 +87,7 @@ if (title) {
 	<body class="min-h-screen transition " class:list={[{"is-home": isHomePage, "enable-banner": enableBanner}]}>
 		<ConfigCarrier></ConfigCarrier>
 		<GlobalStyles>
-		<div id="banner-wrapper" class="absolute w-full">
+		<div id="banner-wrapper" class:list={["absolute invert-[var(--banner)] w-full h-[128px] max-h-[128px] md:h-[200px] md:max-h-[200px]",{"hidden": !siteConfig.banner.enable}]}>
 			<ImageWrapper id="boxtest" alt="Banner image of the blog" class:list={["object-center object-cover h-full", {"hidden": !siteConfig.banner.enable}]}
 					  src={siteConfig.banner.src}>
 			</ImageWrapper>

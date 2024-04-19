@@ -3,8 +3,8 @@ title: HoloDissolveFX
 published: 2024-04-09
 description: 'Procedural hologram & dissolve shaders for URP'
 image: '2.png'
-tags: [Shaders-Graph, Asset-Store]
-category: 'Unity Projects'
+tags: [unity, shaders-graph]
+category: 'assets'
 draft: false 
 ---
 A procedural hologram & dissolve shaders for URP and entirely in Shader Graph.

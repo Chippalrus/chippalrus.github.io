@@ -13,12 +13,11 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const {page} = Astro.props;
-
 const len = page.data.length;
 
 ---
 
-<MainGridLayout>
+<MainGridLayout title="All Posts">
     <PostPage page={page}></PostPage>
-    <Pagination class="mx-auto onload-animation" page={page} style=`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`></Pagination>
+    <Pagination class="mx-auto onload-animation" page={page} name='posts/' style=`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`></Pagination>
 </MainGridLayout>

@@ -1,6 +1,6 @@
 ---
 import {getPostUrlBySlug} from "@utils/url-utils";
-import PostCard from "./PostCard.astro";
+import PostCardGrid from "./PostCardGrid.astro";
 
 const {page} = Astro.props;
 
@@ -8,11 +8,11 @@ let delay = 0
 const interval = 50
 ---
 <!--div class="transition flex flex-col lg:flex-row lg:h-[446px] lg:flex-none rounded-[var(--radius-large)] bg-[var(--card-bg)] py-1 md:py-0 md:bg-transparent md:gap-4 mb-4"-->
-<div class="grid grid-cols-1 lg:h-[500px] justified-between md:grid-cols-1 rounded-[var(--radius-large)] bg-[var(--card-bg)] py-1 py-0 bg-transparent gap-4 mb-4">
+<div class="grid grid-cols-3 justified-between rounded-[var(--radius-large)] bg-[var(--card-bg)] py-1 py-0 bg-transparent gap-4 mb-4">
 
     {page.data.map((entry: { data: { draft: boolean; title: string; tags: string[]; category: string; published: Date; image: string; description: string; }; slug: string; }) => {
         return (
-            <PostCard
+            <PostCardGrid
                     entry={entry}
                     title={entry.data.title}
                     tags={entry.data.tags}
@@ -22,9 +22,9 @@ const interval = 50
                     image={entry.data.image}
                     description={entry.data.description}
                     draft={entry.data.draft}
-                    class:list="md:h-[112px] onload-animation"
+                    class:list="onload-animation"
                     style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
-            ></PostCard>
+            ></PostCardGrid>
         );
     })}
 </div>

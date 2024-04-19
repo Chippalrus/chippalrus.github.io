@@ -3,8 +3,8 @@ title: Minimal LipSync (Redux)
 published: 2024-04-08
 description: 'Speech based LipSync implementation for Unity'
 image: '2.png'
-tags: [Audio, Asset-Store]
-category: 'Unity Projects'
+tags: [unity, audio]
+category: 'assets'
 draft: false 
 ---
 Speech based LipSync implementation for Unity.

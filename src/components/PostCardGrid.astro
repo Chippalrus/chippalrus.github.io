@@ -1,0 +1,89 @@
+---
+import path from "path";
+import PostMetaShort from "./PostMetaShort.astro";
+import ImageWrapper from "./misc/ImageWrapper.astro";
+import { Icon } from 'astro-icon/components';
+import {i18n} from "../i18n/translation";
+import I18nKey from "../i18n/i18nKey";
+import {getDir} from "../utils/url-utils";
+
+interface Props {
+    class: string;
+    entry: any;
+    title: string;
+    url: string;
+    published: Date;
+    tags: string[];
+    category: string;
+    image: string;
+    description: string;
+    words: number;
+    draft: boolean;
+    style: string;
+}
+const { entry, title, url, published, tags, category, image, description, words, style } = Astro.props;
+const className = Astro.props.class;
+
+const hasCover = image !== undefined && image !== null && image !== '';
+
+const coverWidth = "28%";
+
+const { remarkPluginFrontmatter } = await entry.render();
+---
+<div class:list={["card-base flex flex-col w-full rounded-[var(--radius-large)] overflow-hidden relative", className]} style={style}>
+    <a href={url} aria-label={title} class:list={["absolute w-full h-full mx-auto"]}>
+        <div class="opacity-0 hover:opacity-100 absolute z-20 w-full h-full flex items-center justify-center hover:bg-black/30 active:bg-black/50 transition">
+            <Icon name="material-symbols:chevron-right-rounded" class="transition text-white text-5xl"></Icon>
+        </div>
+    <div class:list={["pl-9 pr-6 pr-2 pt-6 pb-0 relative", {"w-full w-[calc(100%_-_52px_-_12px)]": !hasCover, "w-full w-[calc(100%_-_var(--coverWidth)_-_12px)]": hasCover}]}>
+        <a href={url}
+           class="text-[20px] leading-6 transition w-full block font-bold mb-3 text-3xl text-90
+        hover:text-[var(--primary)] dark:hover:text-[var(--primary)]
+        active:text-[var(--title-active)] dark:active:text-[var(--title-active)]
+        before:w-1 before:h-5 before:rounded-md before:bg-[var(--primary)]
+        before:absolute before:top-[26px] before:left-[18px] before:block
+        ">
+            {title}<Icon class="inline text-[var(--primary)] hidden -translate-y-[0.15rem]" name="material-symbols:chevron-right-rounded" size={28} ></Icon>
+        </a>
+
+
+        <!-- metadata -->
+        <PostMetaShort published={published} tags={tags} category={category} hideTagsForMobile={true} class:list={{"mb-4": description, "mb-6": !description}}></PostMetaShort>
+
+        <!-- description -->
+        <!--div class="transition text-75 mb-3.5">{ description }</div-->
+
+        <!-- word count and read time  -->
+        <!--div class="text-sm text-black/30 dark:text-white/30 flex gap-4 transition">
+            <div>{remarkPluginFrontmatter.words} {" " + i18n(I18nKey.wordsCount)}</div>
+            <div>|</div>
+            <div>{remarkPluginFrontmatter.minutes} {" " + i18n(I18nKey.minutesCount)}</div>
+        </div-->
+
+    </div>
+
+    {hasCover &&
+        /*<a href={url} aria-label={title} class:list={["group","max-h-none mx-auto","top-3 bottom-3 right-3 rounded-xl overflow-hidden active:scale-95"]}>
+        */
+        <ImageWrapper src={image} basePath={path.join("content/posts/", getDir(entry.id))} alt="Cover Image of the Post"
+                  class="aspect-square w-full h-full">
+        </ImageWrapper>
+        /*</a>*/
+    }
+
+    {!hasCover &&
+        <a href={url} aria-label={title} class="hidden md:flex btn-regular w-[3.25rem]
+         absolute right-3 top-3 bottom-3 rounded-xl bg-[var(--enter-btn-bg)]
+         hover:bg-[var(--enter-btn-bg-hover)] active:bg-[var(--enter-btn-bg-active)] active:scale-95
+        ">
+            <Icon name="material-symbols:chevron-right-rounded"
+                  class="transition text-[var(--primary)] text-4xl mx-auto">
+            </Icon>
+        </a>
+    }
+    </a>
+</div>
+<!--div class="transition border-t-[1px] border-dashed mx-6 border-black/10 dark:border-white/[0.15] last:border-t-0 md:hidden"></div-->
+
+<style lang="stylus" define:vars={{coverWidth}}>
+</style>

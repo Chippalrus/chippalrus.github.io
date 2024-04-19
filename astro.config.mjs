@@ -41,6 +41,7 @@ export default defineConfig({
       globalInstance: true,
     }),
     icon({
+      iconDir: "src/assets/icons",
       include: {
         "material-symbols": ["*"],
         "fa6-brands": ["*"],

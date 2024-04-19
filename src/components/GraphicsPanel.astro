@@ -1,0 +1,119 @@
+---
+import {getSortedPosts} from "../utils/content-utils";
+import {getPostUrlBySlug} from "../utils/url-utils";
+import {i18n} from "../i18n/translation";
+import I18nKey from "../i18n/i18nKey";
+import {UNCATEGORIZED} from "@constants/constants";
+
+import path from "path";
+import ImageWrapper from "./misc/ImageWrapper.astro";
+import {getDir} from "../utils/url-utils";
+
+import PostCardGrid from "./PostCardGrid.astro";
+
+interface Props {
+    keyword: string;
+    tags: string[];
+    categories: string[];
+}
+const { keyword, tags, categories} = Astro.props;
+
+let posts = await getSortedPosts()
+
+if (Array.isArray(tags) && tags.length > 0) {
+    posts = posts.filter(post =>
+        Array.isArray(post.data.tags) && post.data.tags.some(tag => tags.includes(tag))
+    );
+}
+
+if (Array.isArray(categories) && categories.length > 0) {
+    posts = posts.filter(post =>
+        (post.data.category && categories.includes(post.data.category)) ||
+        (!post.data.category && categories.includes(UNCATEGORIZED))
+    );
+}
+
+const groups = function () {
+    const groupedPosts = posts.reduce((grouped, post) => {
+        const year = post.data.published.getFullYear()
+        if (!grouped[year]) {
+            grouped[year] = []
+        }
+        grouped[year].push(post)
+        return grouped
+    }, {})
+
+    // convert the object to an array
+    const groupedPostsArray = Object.keys(groupedPosts).map(key => ({
+        year: key,
+        posts: groupedPosts[key]
+    }))
+
+    // sort years by latest first
+    groupedPostsArray.sort((a, b) => b.year - a.year)
+    return groupedPostsArray;
+}();
+
+function formatDate(date: Date) {
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    return `${month}-${day}`;
+}
+
+function formatTag(tag: string[]) {
+    return tag.map(t => `#${t}`).join(' ');
+}
+
+let delay = 0
+const interval = 50
+
+---
+
+<div class="px-0 py-0">
+    {
+        groups.map(group => (
+            <div>
+                <div class="card-base mb-4 flex flex-row w-full items-center h-[3.75rem]">
+                    <div class="w-[15%] md:w-[10%] transition text-2xl font-bold text-right text-75">{group.year}</div>
+                    <div class="w-[15%] md:w-[10%]">
+                        <div class="h-3 w-3 bg-none rounded-full outline outline-[var(--primary)] mx-auto -outline-offset-[2px] z-50 outline-3"></div>
+                    </div>
+                    <div class="w-[70%] md:w-[80%] transition text-left text-50">{group.posts.length} {i18n(I18nKey.postsCount)}</div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">
+                    {group.posts.map(post => (
+                        
+                        <PostCardGrid
+                        entry={post}
+                        title={post.data.title}
+                        tags={post.data.tags}
+                        category={post.data.category}
+                        published={post.data.published}
+                        url={getPostUrlBySlug(post.slug)}
+                        image={post.data.image}
+                        description={post.data.description}
+                        draft={post.data.draft}
+                        class:list="onload-animation"
+                        style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
+                        ></PostCardGrid>
+                    ))}
+                </div>
+            </div>
+        ))
+    }
+</div>
+
+<style>
+    @tailwind components;
+    @tailwind utilities;
+
+    @layer components {
+        .dash-line {
+        }
+        .dash-line::before {
+            content: "";
+            @apply w-[10%] h-full absolute -top-1/2 left-[calc(50%_-_1px)] -top-[50%] border-l-[2px]
+            border-dashed pointer-events-none border-[var(--line-color)] transition
+        }
+    }
+</style>

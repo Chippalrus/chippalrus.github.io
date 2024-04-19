@@ -3,11 +3,12 @@ import type { Page } from "astro";
 import { Icon } from 'astro-icon/components';
 interface Props {
     page: Page;
+    name: string;
     class?: string;
     style?: string;
 }
 
-const {page, style} = Astro.props;
+const {page, name, style} = Astro.props;
 
 const HIDDEN = -1;
 
@@ -55,7 +56,7 @@ const commonUrl: string = parts.slice(0, -1).join('/') + '/';
 const getPageUrl = (p: number) => {
     if (p == 1)
         return commonUrl;
-    return commonUrl + 'posts/' + p;
+    return commonUrl + name + p;
 }
 
 ---
