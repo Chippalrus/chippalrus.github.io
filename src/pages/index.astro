@@ -26,7 +26,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
                     <a aria-label={item.name} href={item.url} class:list=
                     {item.name + "_btn link-card _PostsPG !no-underline px-[10px] grid grid-cols-2 grid-row-1 justify-center items-center"}>
                         <Icon name={item.icon} size="1.5rem" class="mx-[5px] col-start-1"></Icon>
-                        <span class="mr-[5px] col-start-2 text-right font-extrabold">{item.name}</span>
+                        <span class="mr-[5px] col-start-2 text-[14px] md:text-[14px] text-right font-extrabold">{item.name}</span>
                     </a>
                 )}
                 <Content />
@@ -40,7 +40,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
                     <a aria-label={item.name} href={item.url} class:list=
                     {item.name + "_btn link-crd _PostsPG !no-underline px-[10px] grid grid-cols-2 grid-row-1 justify-center items-center"}>
                         <Icon name={item.icon} size="1.5rem" class="mx-[5px] col-start-1"></Icon>
-                        <span class="mr-[5px] col-start-2 text-right font-extrabold">{item.name}</span>
+                        <span class="mr-[5px] col-start-2 text-[14px] md:text-[16px] text-right font-extrabold">{item.name}</span>
                     </a>
                 )}
                 <Content />

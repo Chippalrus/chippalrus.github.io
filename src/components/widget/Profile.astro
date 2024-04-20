@@ -21,8 +21,8 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
             <!--ImageWrapper src={config.avatar} alt="Profile Image of the Author" class="mx-auto w-[110px] h-[110px] "></ImageWrapper-->
         </a>
         <div class="text-xl text-right mt-6 mb-1 ml-[-16px] mr-[0px] dark:text-neutral-50 transition">
-            <a class="_idx" href="/"><div class="uppercase text-[32px]" style="letter-spacing:6px; font-family:'Source Sans Pro';">{config.name}</div></a>
-            <div class="mr-1 text-[12px] flex-none text-sm text-right text-neutral-400 mb-2.5 transition">{config.bio}</div>
+            <a class="_idx" href="/"><div class="uppercase !text-[32px]" style="letter-spacing:6px; font-family:'Source Sans Pro';">{config.name}</div></a>
+            <div class="mr-1 !text-[12px] flex-none text-sm text-right text-neutral-400 mb-2.5 transition">{config.bio}</div>
         </div>
     </div>
     <div class="_nav flex gap-2 mx-3 mb-3 justify-center onload-animation" class:list={[{"hidden": isHomePage}]}>
