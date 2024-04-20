@@ -54,15 +54,15 @@ const parts: string[] = page.url.current.split('/');
 const commonUrl: string = parts.slice(0, -1).join('/') + '/';
 
 const getPageUrl = (p: number) => {
-    if (p == 1)
-        return commonUrl;
+    if(p == 1){ return commonUrl; }
+    if( page.url.current.includes( name ) ){ return commonUrl + p; }
     return commonUrl + name + p;
 }
 
 ---
 
 <div class:list={[className, "flex flex-row gap-3 justify-center"]} style={style}>
-    <a href={page.url.prev} aria-label={page.url.prev ? "Previous Page" : null}
+    <a href={page.url.prev + '/'} aria-label={page.url.prev ? "Previous Page" : null}
        class:list={["btn-card overflow-hidden rounded-lg text-[var(--primary)] w-11 h-11",
            {"disabled": page.url.prev == undefined}
        ]}

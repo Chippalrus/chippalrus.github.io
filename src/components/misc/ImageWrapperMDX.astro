@@ -14,9 +14,9 @@ const { src, alt } = Astro.props;
 {
   typeof src === 'string' ?
   (
-    <figure class="mx-auto w-[500px]"><a href={src.src} target="_blank"><Image {...props} alt={alt} /></a></figure>
+    <figure class="mx-auto w-4/5"><a href={src.src} target="_blank"><Image {...props} alt={alt} /></a></figure>
   ) : 
   (
-    <figure class="mx-auto w-[500px]"><a href={src.src} target="_blank"><Image {...props} alt={alt} /></a></figure>
+    <figure class="mx-auto w-4/5"><a href={src.src} target="_blank"><Image {...props} alt={alt} /></a></figure>
   )
 }

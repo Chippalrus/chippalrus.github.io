@@ -14,20 +14,23 @@ export async function getStaticPaths({ paginate }) {
     {
         post.data.tags.map( ( tag: string ) =>
         {
-            if( tag == 'gd' )
+            if( tag == 'illu' )
             {
-                rebuildPosts.push( post );
+                if( post.data.category == 'logos' )
+                {
+                    rebuildPosts.push( post );
+                }
             }
         });
     });
-    return paginate(rebuildPosts, { pageSize: PAGE_SIZE - 1 });
+    return paginate(rebuildPosts, { pageSize: PAGE_SIZE + 5 });
 }
 
 const {page} = Astro.props;
 const len = page.data.length;
 
 ---
-<MainGridLayout title="Graphic Design">
+<MainGridLayout title="Logo designs">
     <PostPageGrid page={page}></PostPageGrid>
-    <Pagination class="mx-auto onload-animation" page={page} name='gd/' style=`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`></Pagination>
+    <Pagination class="mx-auto onload-animation" page={page} name='illu/logos/' style=`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`></Pagination>
 </MainGridLayout>

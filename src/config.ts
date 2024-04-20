@@ -27,9 +27,9 @@ export const profileConfig: ProfileConfig = {
   bio: 'Zero discipline, all-purpose flour.',
   links: [
     {
-      name: 'Posts',
-      icon: 'material-symbols:menu-rounded',
-      url: '/posts/',
+      name: 'About',
+      icon: 'fa6-regular:address-card',
+      url: '/about/',
     },
     {
       name: 'Twitter',
@@ -74,9 +74,9 @@ export const profileConfig: ProfileConfig = {
       url: '/unity/assets/',
     },
     {
-      name: 'Logo Design',
-      icon: 'chippalrus_w',
-      url: '/gd/logos/',
+      name: 'Illustrations',
+      icon: 'chippalrus_b',
+      url: '/illu/',
     },
     {
       name: 'Work in progress',
@@ -86,7 +86,7 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'All Posts',
       icon: 'material-symbols:menu-rounded',
-      url: '/posts/',
+      url: '/archive/',
     },
   ],
 }

@@ -1,6 +1,6 @@
 ---
 title: Playlist P
-published: 2024-04-07
+published: 2021-04-21
 description: 'A very basic playlist player with basic functions'
 image: '2.png'
 tags: [unity, audio]

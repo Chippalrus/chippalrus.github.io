@@ -17,7 +17,8 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
             <div class="absolute transition pointer-events-none group-hover:bg-black/30 group-active:bg-black/50 z-50 flex w-full h-full items-center justify-center">
                 <Icon name="fa6-regular:address-card" class="transition opacity-0 group-hover:opacity-100 text-white text-5xl"></Icon>
             </div>
-            <ImageWrapper src={config.avatar} alt="Profile Image of the Author" class="mx-auto w-[110px] h-[110px] "></ImageWrapper>
+            <Icon name="chippalrus_n" class="mx-auto w-[110px] h-[110px]"></Icon>
+            <!--ImageWrapper src={config.avatar} alt="Profile Image of the Author" class="mx-auto w-[110px] h-[110px] "></ImageWrapper-->
         </a>
         <div class="text-xl text-right mt-6 mb-1 ml-[-16px] mr-[0px] dark:text-neutral-50 transition">
             <a class="_idx" href="/"><div class="uppercase text-[32px]" style="letter-spacing:6px; font-family:'Source Sans Pro';">{config.name}</div></a>

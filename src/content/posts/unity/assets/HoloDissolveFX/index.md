@@ -1,6 +1,6 @@
 ---
 title: HoloDissolveFX
-published: 2024-04-09
+published: 2023-08-11
 description: 'Procedural hologram & dissolve shaders for URP'
 image: '2.png'
 tags: [unity, shaders-graph]
