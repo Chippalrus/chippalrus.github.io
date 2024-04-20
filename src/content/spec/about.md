@@ -1,6 +1,6 @@
 # About
 *Mostly self-taught; totally not a professional*.  
-All-purpose ~~flour~~ coder for Web-Dev and Game Dev. I pick up and learn things out of interest, it just happens to be mostly related to interactive digital media.
+All-purpose ~~flour~~ coder for Web-Dev and Game Dev. Learning things out of interest.
 
 ### Languages
 > #### Game Dev
