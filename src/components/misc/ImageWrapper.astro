@@ -6,10 +6,11 @@ interface Props {
     class?: string;
     alt?: string
     basePath?: string
+    bgDark?: string
 }
 import { Image } from 'astro:assets';
 
-const {id, src, alt, basePath = '/'} = Astro.props;
+const {id, src, alt, bgDark, basePath = '/'} = Astro.props;
 const className = Astro.props.class;
 
 const isLocal = !(src.startsWith('/') || src.startsWith('http') || src.startsWith('https') || src.startsWith('data:'));
@@ -25,7 +26,7 @@ if (isLocal) {
 
 ---
 <div class:list={[className, 'overflow-hidden relative']}>
-    <div class="transition absolute inset-0 dark:bg-black/10 bg-opacity-50 pointer-events-none"></div>
+    <div class:list={[`transition absolute inset-0 bg-opacity-50 pointer-events-none`, {'dark:bg-black/10': (bgDark === 'true' )}]}></div>
     {isLocal && <Image src={img} alt={alt || ""} class="w-full h-full object-center object-cover" />}
     {!isLocal && <img src={src} alt={alt || ""} class="w-full h-full object-center object-cover" />}
 </div>
