@@ -25,7 +25,7 @@ const oklchToHex = (str) => {
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://chippalrus.ca",
+  site: "https://chippalrus.dev",
   base: "/",
   integrations: [
     mdx(),
