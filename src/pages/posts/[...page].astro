@@ -9,7 +9,7 @@ import PostPage from "../../components/PostPage.astro";
 
 export async function getStaticPaths({ paginate }) {
     const allBlogPosts = await getSortedPosts();
-    return paginate(allBlogPosts, { pageSize: PAGE_SIZE });
+    return paginate(allBlogPosts, { pageSize: PAGE_SIZE + 8 });
 }
 
 const {page} = Astro.props;
