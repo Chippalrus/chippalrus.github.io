@@ -23,3 +23,6 @@ All-purpose ~~flour~~ coder for Web-Dev and Game Dev. Learning things out of int
 - https://twitter.com/Chippalrus
 - https://www.instagram.com/chippalrus
 - https://chippalrus.bsky.social
+
+### Contact
+- contact@chippalrus.dev
