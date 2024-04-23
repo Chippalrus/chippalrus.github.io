@@ -9,6 +9,7 @@ export type SiteConfig = {
     enable: boolean
     src: string
   }
+  url: string
 }
 
 export enum LinkPreset {

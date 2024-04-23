@@ -15,6 +15,7 @@ export const siteConfig: SiteConfig = {
     enable: true,
     src: 'assets/images/1080.png',
   },
+  url: 'https://chippalrus.dev/',
 }
 
 export const navBarConfig: NavBarConfig = {

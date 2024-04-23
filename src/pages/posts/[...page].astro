@@ -17,7 +17,7 @@ const len = page.data.length;
 
 ---
 
-<MainGridLayout title="All Posts">
+<MainGridLayout title="All Posts" description="Should probably just use the archive.">
     <PostPage page={page}></PostPage>
     <Pagination class="mx-auto onload-animation" page={page} name='posts/' style=`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`></Pagination>
 </MainGridLayout>

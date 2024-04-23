@@ -31,7 +31,7 @@ const {page} = Astro.props;
 const len = page.data.length;
 
 ---
-<MainGridLayout title="Puchasable Unity Assets">
+<MainGridLayout title="Released Unity Assets" description="Downloadable/Purchasable Unity Projects">
     <PostPageGrid page={page}></PostPageGrid>
     <Pagination class="mx-auto onload-animation" page={page} name='unity/assets/' style=`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`></Pagination>
 </MainGridLayout>

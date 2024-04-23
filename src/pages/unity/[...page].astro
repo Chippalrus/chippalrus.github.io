@@ -27,7 +27,7 @@ const {page} = Astro.props;
 const len = page.data.length;
 
 ---
-<MainGridLayout title="Unity related posts">
+<MainGridLayout title="Unity" description="All Unity Posts and Projects">
     <PostPageGrid page={page}></PostPageGrid>
     <Pagination class="mx-auto onload-animation" page={page} name='unity/' style=`animation-delay: calc(var(--content-delay) + ${(len)*50}ms)`></Pagination>
 </MainGridLayout>

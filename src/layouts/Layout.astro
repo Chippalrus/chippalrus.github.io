@@ -9,12 +9,16 @@ import {pathsEqual} from "@utils/url-utils";
 import ConfigCarrier from "@components/ConfigCarrier.astro";
 import {siteConfig} from "@/config";
 
+import {SEO} from "astro-seo";
+
 interface Props {
 	title: string;
 	banner: string;
+	description: string;
+	image: string;
 }
 
-let { title, banner } = Astro.props;
+let { title, banner, description, image } = Astro.props;
 
 const isHomePage = pathsEqual(Astro.url.pathname, '/');
 
@@ -60,17 +64,56 @@ if (title) {
 } else {
 	pageTitle = `${siteConfig.title} - ${siteConfig.subtitle}`;
 }
+
 ---
 <!DOCTYPE html>
 <html lang="en" isHome={isHomePage} pathname={testPathName} class="bg-[var(--page-bg)] transition text-[16px]">
 	<head>
-
-		<title>{pageTitle}</title>
-
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
+		<SEO
+			title=			{pageTitle ? pageTitle: "Chippalrus"}
+			description=	{description ? description: "Zero discipline, all-purpose flour."}
+			charset=		"UTF-8"
+			openGraph=
+			{{
+				basic:
+				{
+					title:	`${pageTitle ? pageTitle: "Chippalrus"}`,
+					type:	"website",
+					image:	`${image ? image: siteConfig.url + "/icons/o/icon-light-192.png"}`,
+				}
+			}}
+			twitter=
+			{{
+					creator: "@chippalrus"
+				,	site:	 "@chippalrus"
+			}}
+			extend=
+			{{
+				// extending the default link tags
+				link: [{ rel: "icon", href: siteConfig.url + "/icons/o/icon-light-128.png" }],
+				// extending the default meta tags
+				meta: 
+				[
+					{
+						name:		"twitter:image",
+						content:	`${image ? image: siteConfig.url + "/icons/o/icon-light-192.png"}`,
+					},
+					{
+						  name:		"twitter:title"
+						, content:  `${pageTitle ? pageTitle: "Chippalrus"}`
+					},
+					{
+						  name:		"twitter:description"
+						, content:	`${description ? description: "Zero discipline, all-purpose flour."}`
+					},
+				],
+			}}
+		/>
 		<meta name="generator" content={Astro.generator} />
+		<!--title>{pageTitle}</title>
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" /-->
+
 		<link rel="icon" media="(prefers-color-scheme: light)" href="/icons/o/icon-light-32.png" sizes="32x32">
 		<link rel="icon" media="(prefers-color-scheme: light)" href="/icons/o/icon-light-128.png" sizes="128x128">
 		<link rel="icon" media="(prefers-color-scheme: light)" href="/icons/o/icon-light-180.png" sizes="180x180">

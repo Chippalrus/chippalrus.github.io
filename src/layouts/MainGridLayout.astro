@@ -13,15 +13,17 @@ import { profileConfig } from '../config'
 interface Props {
   title: string
   banner?: string
+  description?: string
+  image?: string
 }
 
-const { title, banner } = Astro.props
+const { title, banner, description, image } = Astro.props
 const isHomePage = pathsEqual(Astro.url.pathname, '/')
 const enableBanner = siteConfig.banner.enable
 const config = profileConfig
 ---
 
-<Layout title={title} banner={banner}>
+<Layout title={title} banner={banner} description={description} image={image}>
 <div class="max-w-[var(--page-width)] min-h-screen grid grid-cols-[1] grid-rows-[auto_auto_1fr_auto] lg:grid-rows-[auto_auto_1fr]
     mx-auto gap-4 relative px-0">
     <!--div id="top-row" class="col-span-3 grid-rows-1 z-50 onload-animation" class:list={[""]}>
