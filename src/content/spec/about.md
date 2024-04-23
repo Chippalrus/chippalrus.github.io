@@ -3,8 +3,8 @@
 All-purpose ~~flour~~ coder for things of interest.
 
 ### Languages
-> C/C++, C#
-> HTML5, CSS, JS, Astro
+> C/C++, C#  
+> HTML5, CSS, JS, Astro  
 > PHP
 
 ### Tools
