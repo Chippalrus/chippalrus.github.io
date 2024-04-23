@@ -3,9 +3,7 @@
 All-purpose ~~flour~~ coder for things of interest.
 
 ### Languages
-> #### Game Dev
 > C/C++, C#
-> #### Web-Dev
 > HTML5, CSS, JS, PHP, Astro
 
 ### Tools
