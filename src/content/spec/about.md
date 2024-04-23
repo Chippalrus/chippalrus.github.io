@@ -1,6 +1,6 @@
 # About
-*Mostly self-taught; totally not a professional*.  
-All-purpose ~~flour~~ coder for Web-Dev and Game Dev. Learning things out of interest.
+*Mostly self-taught; Totally not a professional.*  
+All-purpose ~~flour~~ coder for things of interest.
 
 ### Languages
 > #### Game Dev
