@@ -15,9 +15,10 @@ interface Props {
   banner?: string
   description?: string
   image?: string
+  pageType?:string
 }
 
-const { title, banner, description, image } = Astro.props
+const { title, banner, description, image, pageType } = Astro.props
 const isHomePage = pathsEqual(Astro.url.pathname, '/')
 const enableBanner = siteConfig.banner.enable
 const config = profileConfig
@@ -26,33 +27,16 @@ const config = profileConfig
 <Layout title={title} banner={banner} description={description} image={image}>
 <div class="max-w-[var(--page-width)] min-h-screen grid grid-cols-[1] grid-rows-[auto_auto_1fr_auto] lg:grid-rows-[auto_auto_1fr]
     mx-auto gap-4 relative px-0">
-    <!--div id="top-row" class="col-span-3 grid-rows-1 z-50 onload-animation" class:list={[""]}>
-        <div class="absolute h-8 left-0 right-0 -top-8 bg-[var(--card-bg)] transition"></div> 
-        <Navbar></Navbar>
-    </div--><!-- used for onload animation lg:col-start-2 lg:col-end-2-->
-
     <div id="top-row" class="col-span-3 grid-rows-1 z-50 onload-animation" class:list={[""]}>
         <div class="absolute h-8 left-0 right-0 -top-8 bg-[var(--card-bg)] transition"></div>
-        <Profile></Profile>
+        <Profile pageType={pageType}></Profile>
     </div>
-
-    <!--SideBar class="row-start-3 row-end-4 col-span-2 lg:row-start-2 lg:row-end-3 lg:col-span-1 lg:max-w-[17.5rem] onload-animation"></SideBar-->
-
     <div id="content-wrapper" class="row-start-2 col-span-3 overflow-hidden onload-animation">
-        <!--div class="_nav flex gap-2 mx-3 mb-3 justify-center onload-animation" class:list={[{"hidden": isHomePage}]}>
-            {config.links.map(item =>
-                <a aria-label={item.name} href={item.url} class:list=
-                        {item.name + "_btn link-card btn-regular rounded-lg h-9 w-9 active:scale-90"}>
-                    <Icon name={item.icon} size="1.5rem"></Icon>
-                </a>
-            )}
-        </div-->
         <!-- the overflow-hidden here prevent long text break the layout-->
         <main id="swup" class="transition-fade">
             <slot></slot>
         </main>
     </div>
-
     <!--div id="footer" class="grid-rows-3 col-span-2 mt-4 onload-animation">
         <Footer></Footer>
     </div-->

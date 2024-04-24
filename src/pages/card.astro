@@ -18,7 +18,7 @@ const { Content } = await aboutPost.render()
 const config = profileConfig
 const isHomePage = pathsEqual(Astro.url.pathname, '/');
 ---
-<MainGridLayout title="card">
+<MainGridLayout title="card" pageType="card">
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
         <div class="card-base z-10 px-9 py-6 relative w-[380px] mx-auto">
             <Markdown class="mt-2 grid grid-cols-2 gap-5 mb-[10px]">
