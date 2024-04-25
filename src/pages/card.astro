@@ -11,6 +11,7 @@ import { profileConfig } from '../config'
 import ImageWrapper from '../components/misc/ImageWrapper.astro'
 import {pathsEqual} from "@utils/url-utils";
 
+
 const aboutPost = await getEntry('spec', 'card')
 
 const { Content } = await aboutPost.render()

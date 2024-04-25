@@ -168,10 +168,15 @@ if (title) {
 window.addEventListener('locationChange', function()
 {
 	const eNav		= document.querySelector( '._nav' );
+	const eProf		= document.querySelector( '._Norm' );
+	const eCard		= document.querySelector( '.bCard' );
+	
 	if( (window.location.pathname.indexOf("/") + 1) % ( window.location.pathname.lastIndexOf("/") + 1 ) === 0 )
 	{
 		//console.log('Home');
 		if( eNav != null ){ eNav.classList.add( 'hidden' ); }
+		if( eCard != null ){ eCard.classList.add( 'hidden' ); }
+		if( eProf != null ){ eProf.classList.remove( 'hidden' ); }
 	}
 	else
 	{
