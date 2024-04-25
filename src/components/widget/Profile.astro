@@ -26,7 +26,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
                     <div class="!text-[20.5px]" style="letter-spacing:4px; font-family:'mechsuit';">{config.name}</div>
                     <div class="mr-1 mb-[26px] !text-[12px] flex-none text-sm text-right text-neutral-400 mb-2.5 transition">{config.bio}</div>
                     {config.card_info.map(item =>
-                        <a href="/">
+                        <a href={item.url}>
                             <div class="flex flex-row-reverse mx-auto gap-2 items-center">
                                 <Icon name={item.icon} class="" size="1.5rem"></Icon>
                                 <div class:list={"my-[4px]"} style="col-span-2 letter-spacing:1px; font-family:'Source Sans Pro';">{item.name}</div>
