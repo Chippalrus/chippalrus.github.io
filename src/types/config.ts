@@ -37,10 +37,15 @@ export type ProfileConfig = {
     url: string
     icon: string
   }[]
-  page_links: {
+  page_links?: {
     name: string
     url: string
     icon: string
+  }[]
+  card_info?:{
+    name: string
+    icon?: string
+    url?: string
   }[]
 }
 

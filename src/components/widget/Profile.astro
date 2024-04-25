@@ -15,22 +15,25 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
 {
     pageType === 'card' ?
     (
-        <div class="m-auto mt-[20px] card-base max-w-[380px]">
+        <div class="bCard m-auto mt-[20px] pb-[30px] card-base max-w-[380px]">
             <button aria-label="Light/Dark Mode" class="absolute float-left ml-1 mt-1 btn-plain h-6 w-6 rounded-lg active:scale-90" id="scheme-switch">
                 <Icon name="material-symbols:wb-sunny-outline-rounded" size={"1.25rem"} class="absolute opacity-[var(--display-light-icon)]"></Icon>
                 <Icon name="material-symbols:dark-mode-outline-rounded" size={"1.25rem"} class="absolute opacity-[var(--display-dark-icon)]"></Icon>
             </button>
-            <div class="flex flex-row-reverse mx-auto justify-center items-center">
-                <a aria-label="Go to About Page" href="/about/" class="_PostPage group block relative my-3 max-w-none overflow-hidden rounded-xl active:scale-95">
-                    <div class="absolute transition pointer-events-none group-hover:bg-black/30 group-active:bg-black/50 z-50 flex w-full h-full items-center justify-center">
-                        <Icon name="fa6-regular:address-card" class="transition opacity-0 group-hover:opacity-100 text-white text-5xl"></Icon>
-                    </div>
-                    <Icon name="chippalrus_n" class="mx-auto w-[110px] h-[110px]"></Icon>
-                </a>
-                <!--div class="text-xl text-right mt-6 mb-1 ml-[-16px] mr-[0px] dark:text-neutral-50 transition">
-                    <a class="_idx" href="/"><div class="uppercase !text-[32px]" style="letter-spacing:6px; font-family:'Source Sans Pro';">{config.name}</div></a>
-                    <div class="mr-1 !text-[12px] flex-none text-sm text-right text-neutral-400 mb-2.5 transition">{config.bio}</div>
-                </div-->
+            <div class="bCard-text flex flex-col mx-auto my-auto justify-center items-center">
+                    <Icon name="chippalrus_n" class="mx-auto w-[300px] h-[300px]"></Icon>
+                <div class="text-xl text-right -mt-[16px] dark:text-neutral-50 transition">
+                    <div class="!text-[22px]" style="letter-spacing:4px; font-family:'mechsuit';">{config.name}</div>
+                    <div class="mr-1 mb-[26px] !text-[12px] flex-none text-sm text-right text-neutral-400 mb-2.5 transition">{config.bio}</div>
+                    {config.card_info.map(item =>
+                        <a href={item.url}>
+                            <div class="flex flex-row-reverse mx-auto gap-2 items-center">
+                                <Icon name={item.icon} class="" size="1.5rem"></Icon>
+                                <div class:list={"my-[4px]"} style="col-span-2 letter-spacing:1px; font-family:'Source Sans Pro';">{item.name}</div>
+                            </div>
+                        </a>
+                    )}
+                </div>
             </div>
             <div class="_nav flex gap-2 mx-3 mb-3 justify-center onload-animation hidden">
                 {config.links.map(item =>
@@ -92,7 +95,18 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
 {
 	transform: perspective(800px) rotateY(27deg);
 }
-
+.bCard
+{
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.bCard:hover
+{
+    /*transform: perspective(800px) rotateY(-27deg);*/
+}
+.bCard-text
+{
+    color:var(--bCard-text);
+}
 a.Home_btn{color:#fff;background-color:#004697;}
 a.Youtube_btn{color:#fff;background-color:#004697;}
 a.Twitter_btn{color:#fff;background-color:#004697;}

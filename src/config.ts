@@ -35,7 +35,7 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'Twitter',
       icon: 'fa6-brands:twitter',
-      url: 'https://twitter.com/Chippalrus',
+      url:  'https://twitter.com/Chippalrus',
     },
     {
       name: 'Youtube',
@@ -90,6 +90,23 @@ export const profileConfig: ProfileConfig = {
       url: '/archive/',
     },
   ],
+  card_info: [
+    {
+      name: '@chippalrus',
+      icon: 'fa6-brands:twitter',
+      url:  'https://twitter.com/Chippalrus',
+    },
+    {
+      name: 'https://chippalrus.dev',
+      icon: 'chippalrus_old',
+      url:  'https://chippalrus.dev',
+    },
+    {
+      name: 'contact@chippalrus.dev',
+      icon: 'material-symbols:mail',
+      url:  'mailto:contact@chippalrus.dev',
+    },
+  ]
 }
 
 export const licenseConfig: LicenseConfig = {
