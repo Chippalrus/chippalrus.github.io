@@ -15,7 +15,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
 {
     pageType === 'card' ?
     (
-    <div class="bCard m-auto mt-[20px] py-[20px] card-base max-w-[380px]">
+        <div class="bCard m-auto mt-[20px] py-[20px] card-base max-w-[380px]">
             <button aria-label="Light/Dark Mode" class="absolute float-left ml-1 -mt-4 btn-plain h-6 w-6 rounded-lg active:scale-90" id="scheme-switch">
                 <Icon name="material-symbols:wb-sunny-outline-rounded" size={"1.25rem"} class="absolute opacity-[var(--display-light-icon)]"></Icon>
                 <Icon name="material-symbols:dark-mode-outline-rounded" size={"1.25rem"} class="absolute opacity-[var(--display-dark-icon)]"></Icon>
