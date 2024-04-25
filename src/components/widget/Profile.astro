@@ -44,6 +44,12 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
                 )}
             </div>
         </div>
+
+        <div class="bCard m-auto mt-[20px] py-[30px] card-base max-w-[380px]">
+            <div class="bCard-text flex flex-col mx-auto my-auto justify-center items-center">
+                    <Icon name="QR_ROUND" class="mx-auto w-[300px] h-[300px]"></Icon>
+            </div>
+        </div>
     ) : (
         <div class="m-auto mt-[20px] card-base max-w-[380px]">
             <button aria-label="Light/Dark Mode" class="float-left ml-1 mt-1 btn-plain h-6 w-6 rounded-lg active:scale-90" id="scheme-switch">
