@@ -10,7 +10,6 @@ import ConfigCarrier from "@components/ConfigCarrier.astro";
 import {siteConfig} from "@/config";
 
 import {SEO} from "astro-seo";
-import '../stylesheets/katex.css';
 
 interface Props {
 	title: string;
@@ -122,7 +121,8 @@ if (title) {
 		<link rel="icon" media="(prefers-color-scheme: dark)"  href="/icons/o/icon-dark-180.png" sizes="180x180">
 		<link rel="icon" media="(prefers-color-scheme: dark)"  href="/icons/o/icon-dark-192.png" sizes="192x192">
 
-		<!--link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous"-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+
 		<style define:vars={{ configHue }}></style>  <!-- defines global css variables. This will be applied to <html> <body> and some other elements idk why -->
 
 	</head>
