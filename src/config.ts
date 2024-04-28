@@ -98,7 +98,7 @@ export const profileConfig: ProfileConfig = {
     },
     {
       name: 'https://chippalrus.dev',
-      icon: 'chippalrus_old',
+      icon: 'material-symbols:language',
       url:  'https://chippalrus.dev',
       social:false,
     },

@@ -24,7 +24,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
                     <Icon name="QR_CARD_" class="mx-auto w-[300px] h-[300px]"></Icon>
                 <div class="text-xl text-right mt-[20px] dark:text-neutral-50 transition">
                     <div class="!text-[20.5px]" style="letter-spacing:4px; font-family:'mechsuit';">{config.name}</div>
-                    <div class="mr-1 mb-[26px] !text-[12px] flex-none text-sm text-right text-neutral-400 mb-2.5 transition">{config.bio}</div>
+                    <div class="mr-1 mb-[26px] !text-[14px] flex-none text-sm text-right text-neutral-400 mb-2.5 transition">{config.bio}</div>
                     {config.card_info.map(item =>   
                         (
                             item.social === true ?
@@ -34,15 +34,14 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
                                         <Icon name={social_item.icon} class="" size="1.5rem"></Icon>
                                     </a>
                                 )}
-                                <a href={item.url}><div class:list={"my-[4px]"} style="col-span-2 letter-spacing:1px; font-family:'Source Sans Pro';">{item.name}</div></a>
+                                <a href={item.url}><div class:list={"my-[4px]"} style="letter-spacing:1px; font-family:'Source Sans Pro';">{item.name}</div></a>
                             </div>
                             :
-                            <a href={item.url}>
-                                <div class="flex flex-row-reverse mx-auto gap-2 items-center">
-                                    <Icon name={item.icon} class="" size="1.5rem"></Icon>
-                                    <div class:list={"my-[4px]"} style="col-span-2 letter-spacing:1px; font-family:'Source Sans Pro';">{item.name}</div>
-                                </div>
-                            </a>
+                            <div class="flex flex-row-reverse mx-auto gap-2 items-center">
+                                <a href={item.url}><Icon name={item.icon} class="" size="1.5rem"></Icon></a>
+                                <a href={item.url}><div class:list={"my-[4px]"} style="letter-spacing:1px; font-family:'Source Sans Pro';">{item.name}</div></a>
+                            </div>
+                            
                         )
                     )}
                 </div>
