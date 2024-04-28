@@ -11,6 +11,8 @@ import {siteConfig} from "@/config";
 
 import {SEO} from "astro-seo";
 
+import katexCSS from '../stylesheets/katex.css';
+
 interface Props {
 	title: string;
 	banner: string;
@@ -121,7 +123,7 @@ if (title) {
 		<link rel="icon" media="(prefers-color-scheme: dark)"  href="/icons/o/icon-dark-180.png" sizes="180x180">
 		<link rel="icon" media="(prefers-color-scheme: dark)"  href="/icons/o/icon-dark-192.png" sizes="192x192">
 
-		<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+		<link rel="stylesheet" href={katexCSS} integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 		<style define:vars={{ configHue }}></style>  <!-- defines global css variables. This will be applied to <html> <body> and some other elements idk why -->
 
 	</head>
@@ -129,7 +131,7 @@ if (title) {
 		<ConfigCarrier></ConfigCarrier>
 		<GlobalStyles>
 		<div id="banner-wrapper" class:list={["absolute w-full h-[128px] max-h-[128px] md:h-[200px] md:max-h-[200px]",{"hidden": !siteConfig.banner.enable}]}>
-			<ImageWrapper id="boxtest" alt=" " bgDark="false" class:list={["object-center object-cover h-full invert-[var(--banner)]", {"hidden": !siteConfig.banner.enable}]}
+			<ImageWrapper id="boxtest" alt="" bgDark="false" class:list={["object-center object-cover h-full invert-[var(--banner)]", {"hidden": !siteConfig.banner.enable}]}
 					  src={siteConfig.banner.src}>
 			</ImageWrapper>
 		</div>
