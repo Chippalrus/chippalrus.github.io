@@ -46,6 +46,11 @@ export type ProfileConfig = {
     name: string
     icon?: string
     url?: string
+    social?:boolean
+  }[]
+  card_info_social?:{
+    icon?: string
+    url?: string
   }[]
 }
 

@@ -93,18 +93,34 @@ export const profileConfig: ProfileConfig = {
   card_info: [
     {
       name: '@chippalrus',
-      icon: 'fa6-brands:twitter',
       url:  'https://twitter.com/Chippalrus',
+      social:true,
     },
     {
       name: 'https://chippalrus.dev',
       icon: 'chippalrus_old',
       url:  'https://chippalrus.dev',
+      social:false,
     },
     {
       name: 'contact@chippalrus.dev',
       icon: 'material-symbols:mail',
       url:  'mailto:contact@chippalrus.dev',
+      social:false,
+    },
+  ],
+  card_info_social: [
+    {
+      icon: 'fa6-brands:instagram',
+      url:  'https://instagram.com/chippalrus',
+    },
+    {
+      icon: 'bluesky',
+      url:  'https://chippalrus.bsky.social/',
+    },
+    {
+      icon: 'fa6-brands:twitter',
+      url:  'https://twitter.com/Chippalrus',
     },
   ]
 }
