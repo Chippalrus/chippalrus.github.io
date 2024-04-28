@@ -15,7 +15,7 @@ const className = Astro.props.class;
 
 const isLocal = !(src.startsWith('/') || src.startsWith('http') || src.startsWith('https') || src.startsWith('data:'));
 
-// TODO temporary workaround for images dynamic import
+// TODO temporary workaround for images dynamic import {alt || ""}
 // https://github.com/withastro/astro/issues/3373
 let img;
 if (isLocal) {
@@ -27,7 +27,6 @@ if (isLocal) {
 ---
 <div class:list={[className, 'overflow-hidden relative']}>
     <div class:list={[`transition absolute inset-0 bg-opacity-50 pointer-events-none`, {'dark:bg-black/10': (bgDark === 'true' )}]}></div>
-    {isLocal && <Image src={img} alt={alt || ""} class="w-full h-full object-center object-cover" />}
-    {!isLocal && <img src={src} alt={alt || ""} class="w-full h-full object-center object-cover" />}
+    {isLocal && <Image src={img} alt="" class="w-full h-full object-center object-cover" />}
+    {!isLocal && <img src={src} alt="" class="w-full h-full object-center object-cover" />}
 </div>
-
