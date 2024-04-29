@@ -4,14 +4,14 @@ All-purpose ~~flour~~ coder for things of interest.
 
 ### Languages
 > C/C++, C#  
-> HTML5, CSS, JS, Astro  
-> PHP
+> HTML5, CSS, JS, PHP  
+> English
 
 ### Tools
-> #### Game Dev
-> Unity, Unreal, Blender, Quixel Mixer
-> #### Misc
-> Inkscape, Photoshop, Fusion360
+> Unity, Unreal, Astro  
+> Visual Studio, VS Code, Notepad++  
+> Blender, Quixel Mixer, Fusion360  
+> Inkscape, Photoshop
 
 ### Store
 - https://assetstore.unity.com/publishers/53124
@@ -21,7 +21,7 @@ All-purpose ~~flour~~ coder for things of interest.
 - https://www.youtube.com/@chippalrus
 - https://twitter.com/Chippalrus
 - https://www.instagram.com/chippalrus
-- https://chippalrus.bsky.social
-
-### Contact
-- contact@chippalrus.dev
+- https://chippalrus.bsky.social  
+  
+  
+*Yes, I'm just padding this page*
