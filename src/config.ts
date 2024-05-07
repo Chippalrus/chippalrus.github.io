@@ -27,35 +27,20 @@ export const profileConfig: ProfileConfig = {
   name: 'Chippalrus',
   bio: 'Zero discipline, all-purpose flour.',
   links: [
-    {
+    /*{
       name: 'About',
       icon: 'fa6-regular:address-card',
       url: '/about/',
-    },
-    {
-      name: 'Twitter',
-      icon: 'fa6-brands:twitter',
-      url:  'https://twitter.com/Chippalrus',
-    },
+    },*/
     {
       name: 'Youtube',
       icon: 'fa6-brands:youtube',
       url: 'https://www.youtube.com/user/chippalrus',
     },
     {
-      name: 'Itch-io',
-      icon: 'fa6-brands:itch-io',
-      url: 'https://chippalrus.itch.io/',
-    },
-    {
-      name: 'Unity',
-      icon: 'fa6-brands:unity',
-      url: 'https://assetstore.unity.com/publishers/53124',
-    },
-    {
-      name: 'GitHub',
-      icon: 'fa6-brands:github',
-      url: 'https://github.com/Chippalrus',
+      name: 'Twitter',
+      icon: 'fa6-brands:twitter',
+      url:  'https://twitter.com/Chippalrus',
     },
     {
       name: 'Instagram',
@@ -65,7 +50,27 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'Bluesky',
       icon: 'bluesky',
-      url: 'https://chippalrus.bsky.social/',
+      url: 'https://chippalrus.gumroad.com',
+    },
+    {
+      name: 'Unity',
+      icon: 'fa6-brands:unity',
+      url: 'https://assetstore.unity.com/publishers/53124',
+    },
+    {
+      name: 'Itch-io',
+      icon: 'fa6-brands:itch-io',
+      url: 'https://chippalrus.itch.io',
+    },
+    {
+      name: 'Gumroad',
+      icon: 'gumroad',
+      url: 'https://chippalrus.gumroad.com',
+    },
+    {
+      name: 'GitHub',
+      icon: 'fa6-brands:github',
+      url: 'https://github.com/Chippalrus',
     },
   ],
   page_links: [
