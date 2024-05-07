@@ -1,6 +1,6 @@
 # About
 A zero discipline, all-purpose ~~flour~~ coder for interactive digital media.  
-*Mostly self-taught; Totally not a professional.*
+*Mostly self-taught; Totally not a professional.*  
 
 ## Languages
 |            |       |     |    |       |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
@@ -20,6 +20,7 @@ A zero discipline, all-purpose ~~flour~~ coder for interactive digital media.
 ## Store
 - https://assetstore.unity.com/publishers/53124
 - https://chippalrus.itch.io
+- https://chippalrus.gumroad.com
 
 ## Socials
 - https://www.youtube.com/@chippalrus
