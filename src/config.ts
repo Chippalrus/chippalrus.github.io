@@ -38,9 +38,9 @@ export const profileConfig: ProfileConfig = {
       url: 'https://www.youtube.com/user/chippalrus',
     },
     {
-      name: 'Twitter',
-      icon: 'fa6-brands:twitter',
-      url:  'https://twitter.com/Chippalrus',
+      name: 'Bluesky',
+      icon: 'bluesky',
+      url: 'https://chippalrus.gumroad.com',
     },
     {
       name: 'Instagram',
@@ -48,9 +48,9 @@ export const profileConfig: ProfileConfig = {
       url: 'https://instagram.com/chippalrus',
     },
     {
-      name: 'Bluesky',
-      icon: 'bluesky',
-      url: 'https://chippalrus.gumroad.com',
+      name: 'Twitter',
+      icon: 'fa6-brands:twitter',
+      url:  'https://twitter.com/chippalrus_',
     },
     {
       name: 'Unity',
@@ -98,7 +98,7 @@ export const profileConfig: ProfileConfig = {
   card_info: [
     {
       name: '@chippalrus',
-      url:  'https://twitter.com/Chippalrus',
+      url:  'https://chippalrus.bsky.social/',
       social:true,
     },
     {
@@ -116,16 +116,16 @@ export const profileConfig: ProfileConfig = {
   ],
   card_info_social: [
     {
+      icon: 'fa6-brands:twitter',
+      url:  'https://twitter.com/chippalrus_',
+    },
+    {
       icon: 'fa6-brands:instagram',
       url:  'https://instagram.com/chippalrus',
     },
     {
       icon: 'bluesky',
       url:  'https://chippalrus.bsky.social/',
-    },
-    {
-      icon: 'fa6-brands:twitter',
-      url:  'https://twitter.com/Chippalrus',
     },
   ]
 }
