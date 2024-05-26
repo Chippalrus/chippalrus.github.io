@@ -97,6 +97,12 @@ export const profileConfig: ProfileConfig = {
   ],
   card_info: [
     {
+      name: '@chippalrus_',
+      icon: 'fa6-brands:twitter',
+      url:  'https://twitter.com/chippalrus_',
+      social:false,
+    },
+    {
       name: '@chippalrus',
       url:  'https://chippalrus.bsky.social/',
       social:true,
@@ -115,10 +121,6 @@ export const profileConfig: ProfileConfig = {
     },
   ],
   card_info_social: [
-    {
-      icon: 'fa6-brands:twitter',
-      url:  'https://twitter.com/chippalrus_',
-    },
     {
       icon: 'fa6-brands:instagram',
       url:  'https://instagram.com/chippalrus',
