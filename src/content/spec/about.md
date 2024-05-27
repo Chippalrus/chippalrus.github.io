@@ -24,9 +24,9 @@ A zero discipline, all-purpose ~~flour~~ coder for interactive digital media.
 
 ## Socials
 - https://www.youtube.com/@chippalrus
-- https://twitter.com/chippalrus_
+- https://chippalrus.bsky.social 
 - https://www.instagram.com/chippalrus
-- https://chippalrus.bsky.social  
+- [https://twitter.com/chippalrus_](https://twitter.com/chippalrus_)
 
 ## Other
 - https://github.com/Chippalrus
