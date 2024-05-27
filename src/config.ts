@@ -40,7 +40,7 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'Bluesky',
       icon: 'bluesky',
-      url: 'https://chippalrus.gumroad.com',
+      url: 'https://chippalrus.bsky.social',
     },
     {
       name: 'Instagram',
@@ -97,14 +97,8 @@ export const profileConfig: ProfileConfig = {
   ],
   card_info: [
     {
-      name: '@chippalrus_',
-      icon: 'fa6-brands:twitter',
-      url:  'https://twitter.com/chippalrus_',
-      social:false,
-    },
-    {
       name: '@chippalrus',
-      url:  'https://chippalrus.bsky.social/',
+      url:  'https://chippalrus.bsky.social',
       social:true,
     },
     {
