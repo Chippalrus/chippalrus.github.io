@@ -20,7 +20,13 @@ MP3, OGG, WAV, AIF / AIFF, MOD, IT, S3M, XM
 - Does not read metadata ( No album art, No track name... )
 
 ### Available here:
-https://assetstore.unity.com/packages/tools/audio/playlist-p-19228
+* [Unity Asset Store](https://assetstore.unity.com/packages/tools/audio/playlist-p-19228)
+* [Itch.io Page](https://chippalrus.itch.io/playlistp)
+
+### Socials
+* [Twitter](https://twitter.com/chippalrus_)
+* [Bluesky](https://chippalrus.bsky.social)
+* [Instagram](https://www.instagram.com/chippalrus))
 
 
 <iframe width="832" height="468" src="https://www.youtube.com/embed/L0rl8lp4MCo" title="Minimal Lipsync (Unity 2021.1.16f1)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

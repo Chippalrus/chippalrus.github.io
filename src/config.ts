@@ -63,9 +63,9 @@ export const profileConfig: ProfileConfig = {
       url: 'https://chippalrus.itch.io',
     },
     {
-      name: 'Gumroad',
-      icon: 'gumroad',
-      url: 'https://chippalrus.gumroad.com',
+      name: 'Ko-fi',
+      icon: 'kofi',
+      url: 'https://ko-fi.com/chippalrus',
     },
     {
       name: 'GitHub',
