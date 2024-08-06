@@ -5,7 +5,7 @@ A zero discipline, all-purpose ~~flour~~ coder for interactive digital media.
 ## Store
 - https://assetstore.unity.com/publishers/53124
 - https://chippalrus.itch.io
-- https://chippalrus.gumroad.com
+- https://ko-fi.com/chippalrus
 
 ## Socials
 - https://www.youtube.com/@chippalrus
