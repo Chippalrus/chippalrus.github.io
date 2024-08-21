@@ -18,8 +18,8 @@ Only 2D Example is provided, but same method and setup can work for 3D models.
 * [Itch.io Page](https://chippalrus.itch.io/minimal-lipsync)
 
 ### Socials
-* [Twitter](https://twitter.com/chippalrus_)
-* [Bluesky](https://chippalrus.bsky.social)
-* [Instagram](https://www.instagram.com/chippalrus)
+* [Twitter](https://twitter.com/chippalrus_dev)
+* [Bluesky](https://bsky.app/profile/chippalrus.dev)
+* [Instagram](https://www.instagram.com/chippalrus.dev)
 
 <iframe width="832" height="468" src="https://www.youtube.com/embed/JByPoTMODTc" title="Minimal Lipsync (Unity 2021.1.16f1)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

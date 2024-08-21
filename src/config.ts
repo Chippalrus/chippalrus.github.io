@@ -40,17 +40,17 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'Bluesky',
       icon: 'bluesky',
-      url: 'https://chippalrus.bsky.social',
+      url: 'https://bsky.app/profile/chippalrus.dev',
     },
     {
       name: 'Instagram',
       icon: 'fa6-brands:instagram',
-      url: 'https://instagram.com/chippalrus',
+      url: 'https://instagram.com/chippalrus.dev',
     },
     {
       name: 'Twitter',
       icon: 'fa6-brands:twitter',
-      url:  'https://twitter.com/chippalrus_',
+      url:  'https://twitter.com/chippalrus_dev',
     },
     {
       name: 'Unity',
@@ -97,15 +97,15 @@ export const profileConfig: ProfileConfig = {
   ],
   card_info: [
     {
-      name: '@chippalrus',
-      url:  'https://chippalrus.bsky.social',
-      social:true,
+      name: '@chippalrus_dev',
+      icon: 'fa6-brands:twitter',
+      url:  'https://twitter.com/chippalrus_dev',
+      social:false,
     },
     {
-      name: 'https://chippalrus.dev',
-      icon: 'material-symbols:language',
+      name: 'chippalrus.dev',
       url:  'https://chippalrus.dev',
-      social:false,
+      social:true,
     },
     {
       name: 'contact@chippalrus.dev',
@@ -116,13 +116,17 @@ export const profileConfig: ProfileConfig = {
   ],
   card_info_social: [
     {
-      icon: 'fa6-brands:instagram',
-      url:  'https://instagram.com/chippalrus',
+      icon: 'bluesky',
+      url:  'https://bsky.app/profile/chippalrus.dev',
     },
     {
-      icon: 'bluesky',
-      url:  'https://chippalrus.bsky.social/',
+      icon: 'fa6-brands:instagram',
+      url:  'https://instagram.com/chippalrus.dev',
     },
+    {
+      icon: 'material-symbols:language',
+      url:  'https://chippalrus.dev',
+    }
   ]
 }
 

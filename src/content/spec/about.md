@@ -9,9 +9,9 @@ A zero discipline, all-purpose ~~flour~~ coder for interactive digital media.
 
 ## Socials
 - https://www.youtube.com/@chippalrus
-- https://chippalrus.bsky.social 
-- https://www.instagram.com/chippalrus
-- [https://twitter.com/chippalrus_](https://twitter.com/chippalrus_)
+- https://bsky.app/profile/chippalrus.dev
+- https://www.instagram.com/chippalrus.dev
+- [https://twitter.com/chippalrus_](https://twitter.com/chippalrus_dev)
 
 ## Other
 - https://github.com/Chippalrus
