@@ -8,7 +8,7 @@ A zero discipline, all-purpose ~~flour~~ coder for interactive digital media.
 - https://ko-fi.com/chippalrus
 
 ## Socials
-- https://www.youtube.com/@chippalrus
+- https://www.youtube.com/@chippalrus_dev
 - https://bsky.app/profile/chippalrus.dev
 - https://www.instagram.com/chippalrus.dev
 - [https://twitter.com/chippalrus_dev](https://twitter.com/chippalrus_dev)

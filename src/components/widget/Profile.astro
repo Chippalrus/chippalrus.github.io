@@ -27,11 +27,21 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
                     <div class="mr-1 mb-[26px] !text-[14px] flex-none text-sm text-right text-neutral-400 mb-2.5 transition">{config.bio}</div>
                     {config.card_info.map(item =>   
                         (
-                            item.social === true ?
+                            item.social === true && item.sub === false ?
                             <div class="flex flex-row-reverse mx-auto gap-2 items-center">
                                 {config.card_info_social.map(social_item =>
                                     <a href={social_item.url}>
                                         <Icon name={social_item.icon} class="" size="1.5rem"></Icon>
+                                    </a>
+                                )}
+                                <a href={item.url}><div class:list={"my-[4px]"} style="letter-spacing:1px; font-family:'Source Sans Pro';">{item.name}</div></a>
+                            </div>
+                            :
+                            item.sub === true && item.social === false ?
+                            <div class="flex flex-row-reverse mx-auto gap-2 items-center">
+                                {config.card_info_sub.map(sub_item =>
+                                    <a href={sub_item.url}>
+                                        <Icon name={sub_item.icon} class="" size="1.5rem"></Icon>
                                     </a>
                                 )}
                                 <a href={item.url}><div class:list={"my-[4px]"} style="letter-spacing:1px; font-family:'Source Sans Pro';">{item.name}</div></a>

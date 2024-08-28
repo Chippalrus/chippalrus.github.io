@@ -35,7 +35,7 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'Youtube',
       icon: 'fa6-brands:youtube',
-      url: 'https://www.youtube.com/user/chippalrus',
+      url: 'https://www.youtube.com/@chippalrus_dev',
     },
     {
       name: 'Bluesky',
@@ -98,14 +98,16 @@ export const profileConfig: ProfileConfig = {
   card_info: [
     {
       name: '@chippalrus_dev',
-      icon: 'fa6-brands:twitter',
-      url:  'https://twitter.com/chippalrus_dev',
+      icon: 'fa6-brands:youtube',
+      url:  'https://www.youtube.com/@chippalrus_dev',
       social:false,
+      sub:true
     },
     {
       name: 'chippalrus.dev',
       url:  'https://chippalrus.dev',
       social:true,
+      sub:false
     },
     {
       name: 'contact@chippalrus.dev',
@@ -126,6 +128,16 @@ export const profileConfig: ProfileConfig = {
     {
       icon: 'material-symbols:language',
       url:  'https://chippalrus.dev',
+    }
+  ],
+  card_info_sub: [
+    {
+      icon: 'fa6-brands:twitter',
+      url:  'https://twitter.com/chippalrus_dev',
+    },
+    {
+      icon: 'fa6-brands:youtube',
+      url:  'https://www.youtube.com/@chippalrus_dev',
     }
   ]
 }
