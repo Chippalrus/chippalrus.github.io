@@ -14,7 +14,7 @@ Uses 4 blend shapes. Works with Microphone Input and AudioClips. Can work for 3D
 Only 2D Example is provided, but same method and setup can work for 3D models.
 
 ### Available here:
-* [Unity Asset Store](https://assetstore.unity.com/packages/tools/animation/minimal-lipsync-redux-20711)
+* [Unity Asset Store](https://assetstore.unity.com/packages/tools/animation/minimal-lipsync-redux-207112)
 * [Itch.io Page](https://chippalrus.itch.io/minimal-lipsync)
 
 ### Socials

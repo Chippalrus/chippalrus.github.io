@@ -20,7 +20,7 @@ MP3, OGG, WAV, AIF / AIFF, MOD, IT, S3M, XM
 - Does not read metadata ( No album art, No track name... )
 
 ### Available here:
-* [Unity Asset Store](https://assetstore.unity.com/packages/tools/audio/playlist-p-19228)
+* [Unity Asset Store](https://assetstore.unity.com/packages/tools/audio/playlist-p-192284)
 * [Itch.io Page](https://chippalrus.itch.io/playlistp)
 
 ### Socials

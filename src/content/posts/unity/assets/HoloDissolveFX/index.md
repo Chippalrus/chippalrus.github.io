@@ -12,7 +12,7 @@ A procedural hologram & dissolve shaders for URP and entirely in Shader Graph.
 Customisable procedural Hologram and Dissolve Shaders. Includes shaders with combination of the two. Includes three different patterns for dissolve, Hexagons, Squares and Triangles.
 
 ## Available here:
-* [Unity Asset Store](https://assetstore.unity.com/packages/vfx/shaders/holodissolvefx-holograms-dissolve-urp-25)
+* [Unity Asset Store](https://assetstore.unity.com/packages/vfx/shaders/holodissolvefx-holograms-dissolve-urp-251841)
 * [Itch.io Page](https://chippalrus.itch.io/hologram-dissolve)
 
 ### Socials
