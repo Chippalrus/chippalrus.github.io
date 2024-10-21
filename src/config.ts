@@ -77,7 +77,7 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'Unity Assets',
       icon: 'fa6-brands:unity',
-      url: '/unity/assets/',
+      url: '/cv/',
     },
     {
       name: 'Illustrations',
