@@ -139,7 +139,7 @@ if (title) {
 	</body>
 </html>
 <script define:vars={{isHomePage}}>
-/*(() => 
+(() => 
 {
     let oldPS = history.pushState;
     history.pushState = function pushState() 
@@ -151,7 +151,7 @@ if (title) {
     };
 })();
 
-window.addEventListener('locationChange', function()
+/*window.addEventListener('locationChange', function()
 {
 	const eNav		= document.querySelector( '._nav' );
 	const eProf		= document.querySelector( '._Norm' );
