@@ -77,7 +77,7 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'Unity Assets',
       icon: 'fa6-brands:unity',
-      url: '/cv/',
+      url: 'https://chippalrus.dev/cv/',
     },
     {
       name: 'Illustrations',
