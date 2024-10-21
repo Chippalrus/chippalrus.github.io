@@ -1,6 +1,5 @@
 # About
-A zero discipline, all-purpose ~~flour~~ coder for interactive digital media.  
-*Mostly self-taught; Totally not a professional.*  
+Self-taught hobbist coder that dabbles in web & game development. Currently building shaders & assets for usage in Unity game engine.  
 
 ## Store
 - https://assetstore.unity.com/publishers/53124

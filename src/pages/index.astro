@@ -19,7 +19,7 @@ const config = profileConfig
 const isHomePage = pathsEqual(Astro.url.pathname, '/');
 ---
 <MainGridLayout>
-    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+    <!--div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
         <div class="card-base z-10 px-9 py-6 relative w-[380px] mx-auto">
             <Markdown class="mt-2 grid grid-cols-2 gap-5 mb-[10px]">
                 {config.links.map(item =>
@@ -32,7 +32,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
                 <Content />
             </Markdown>
         </div>
-    </div>
+    </div-->
 	<div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32 mt-4">
         <div class="card-base z-10 px-9 py-6 relative w-[380px] mx-auto">
             <Markdown class="mt-2 grid grid-cols-1 gap-5 mb-[10px]">

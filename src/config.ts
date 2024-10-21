@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
   lang: 'en',
   themeHue: 250,
   banner: {
-    enable: true,
+    enable: false,
     src: 'assets/images/1080.png',
   },
   url: 'https://chippalrus.dev/',
@@ -83,17 +83,7 @@ export const profileConfig: ProfileConfig = {
       name: 'Illustrations',
       icon: 'chippalrus_b',
       url: '/illu/',
-    },
-    {
-      name: 'Work in progress',
-      icon: 'material-symbols:construction',
-      url: '/wip/',
-    },
-    {
-      name: 'All Posts',
-      icon: 'material-symbols:menu-rounded',
-      url: '/archive/',
-    },
+    }
   ],
   card_info: [
     {

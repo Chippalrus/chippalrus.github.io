@@ -139,7 +139,7 @@ if (title) {
 	</body>
 </html>
 <script define:vars={{isHomePage}}>
-(() => 
+/*(() => 
 {
     let oldPS = history.pushState;
     history.pushState = function pushState() 
@@ -149,21 +149,6 @@ if (title) {
         window.dispatchEvent(new Event('locationChange'));
         return result;
     };
-/*
-    let oldRS = history.replaceState;
-    history.replaceState = function replaceState()
-	{
-        let result = oldRS.apply(this, arguments);
-        window.dispatchEvent(new Event('replacestate'));
-        window.dispatchEvent(new Event('locationChange'));
-        return result;
-    };
-
-    window.addEventListener('popstate', () =>
-	{
-		window.dispatchEvent(new Event('locationChange'));
-	});
-*/
 })();
 
 window.addEventListener('locationChange', function()
@@ -175,7 +160,7 @@ window.addEventListener('locationChange', function()
 	if( (window.location.pathname.indexOf("/") + 1) % ( window.location.pathname.lastIndexOf("/") + 1 ) === 0 )
 	{
 		//console.log('Home');
-		if( eNav != null ){ eNav.classList.add( 'hidden' ); }
+		//if( eNav != null ){ eNav.classList.add( 'hidden' ); }
 		if( eCard != null ){ eCard.classList.add( 'hidden' ); }
 		if( eProf != null ){ eProf.classList.remove( 'hidden' ); }
 	}
@@ -184,7 +169,7 @@ window.addEventListener('locationChange', function()
 		//console.log('NotHome');
 		if( eNav != null ){ eNav.classList.remove( 'hidden' ); }
 	}
-});
+});*/
 </script>
 
 <style is:global>
@@ -319,7 +304,7 @@ setClickOutsideToClose("display-setting", ["display-setting", "display-settings-
 //setClickOutsideToClose("nav-menu-panel", ["nav-menu-panel", "nav-menu-switch"])
 //setClickOutsideToClose("search-panel", ["search-panel", "search-bar", "search-switch"])
 
-
+/*--page-bg: oklch(0.96 0.00 var(--hue)) oklch(0.16 0.014 var(--hue))*/
 function loadTheme() {
 	if (localStorage.theme === 'dark' || (!('theme' in localStorage) &&
 		window.matchMedia('(prefers-color-scheme: dark)').matches)) {
