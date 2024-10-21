@@ -1,5 +1,5 @@
 # About
-Self-taught hobbist coder that dabbles in web & game development. Currently building shaders & assets for usage in Unity game engine.  
+Self-taught hobbyist coder that dabbles in web & game development. Currently building shaders & assets for usage in Unity game engine.  
 
 ## Store
 - https://assetstore.unity.com/publishers/53124
