@@ -77,13 +77,13 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'Unity Assets',
       icon: 'fa6-brands:unity',
-      url: '/cv/',
+      url: '/unity/assets/',
     },
     {
-      name: 'Illustrations',
-      icon: 'chippalrus_b',
-      url: '/illu/',
-    }
+      name: 'Test',
+      icon: 'fa6-brands:unity',
+      url: '/cv/',
+    },
   ],
   card_info: [
     {
