@@ -78,12 +78,7 @@ export const profileConfig: ProfileConfig = {
       name: 'Unity Assets',
       icon: 'fa6-brands:unity',
       url: '/unity/assets/',
-    },
-    {
-      name: 'Test',
-      icon: 'fa6-brands:unity',
-      url: '/cv/',
-    },
+    }
   ],
   card_info: [
     {
