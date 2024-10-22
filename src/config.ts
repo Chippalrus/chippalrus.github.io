@@ -27,11 +27,6 @@ export const profileConfig: ProfileConfig = {
   name: 'Chippalrus',
   bio: 'Zero discipline, all-purpose flour.',
   links: [
-    /*{
-      name: 'About',
-      icon: 'fa6-regular:address-card',
-      url: '/about/',
-    },*/
     {
       name: 'Youtube',
       icon: 'fa6-brands:youtube',
@@ -77,7 +72,7 @@ export const profileConfig: ProfileConfig = {
     {
       name: 'Unity Assets',
       icon: 'fa6-brands:unity',
-      url: '/unity/assets',
+      url: '/unity',
     }
   ],
   card_info: [

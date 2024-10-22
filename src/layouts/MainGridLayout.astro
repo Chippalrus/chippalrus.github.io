@@ -10,6 +10,12 @@ import { Icon } from 'astro-icon/components'
 import Layout from './Layout.astro'
 import { profileConfig } from '../config'
 
+import {i18n} from "../i18n/translation";
+import I18nKey from "../i18n/i18nKey";
+import { getEntry } from 'astro:content';
+import Markdown from "@components/misc/Markdown.astro";
+import ArchivePanel from "@components/ArchivePanel.astro";
+
 interface Props {
   title: string
   banner?: string
@@ -22,6 +28,9 @@ const { title, banner, description, image, pageType } = Astro.props
 const isHomePage = pathsEqual(Astro.url.pathname, '/')
 const enableBanner = siteConfig.banner.enable
 const config = profileConfig
+
+const aboutPost = await getEntry('spec', 'about')
+const { Content } = await aboutPost.render()
 ---
 
 <Layout title={title} banner={banner} description={description} image={image}>
