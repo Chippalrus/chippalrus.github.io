@@ -50,8 +50,8 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
         </div>
     </div-->
 	<!--div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32 pb-4"-->
-	<div class="grid grid-col-1 lg:grid-rows-3 lg:grid-flow-col gap-4 w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
-        <div class="row-span-1 card-base z-10 px-9 py-6 relative w-[374px] md:w-[554px] lg:w-[414px] mx-auto border-2">
+	<div class="lg:pl-2 grid grid-col-1 lg:grid-rows-3 lg:grid-flow-col gap-4 w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+        <div class="row-span-1 card-base z-10 px-9 py-6 relative w-[374px] md:w-[654px] lg:w-[418px] mx-auto border-2">
             <Markdown class="mt-2 !text-[18px]">
                 <Content />
             </Markdown>
@@ -59,6 +59,7 @@ const isHomePage = pathsEqual(Astro.url.pathname, '/');
 		<div class="lg:row-span-3">
 		<ArchivePanel tags={["unity"]}></ArchivePanel>
 		</div>
+		<div class="hidden lg:block lg:row-span-1"></div>
     </div>
 	
 </MainGridLayout>
