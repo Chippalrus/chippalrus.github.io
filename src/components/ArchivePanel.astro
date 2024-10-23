@@ -66,15 +66,15 @@ function formatTag(tag: string[]) {
             <div>
                 <div class="flex flex-row w-full items-center h-[3.75rem]">
                     <div class=" w-[10%] transition text-2xl font-bold text-right text-75">{group.year}</div>
-                    <div class=" w-[10%] pl-[2.2rem] md:pl-[1.5rem]">
+                    <div class=" w-[21%] md:w-[5%] pr-[1px]">
                         <div class="h-3 w-3 bg-none rounded-full outline outline-[var(--primary)] mx-auto -outline-offset-[2px] z-50 outline-3"></div>
                     </div>
-                    <div class="pl-[1.5rem] w-[70%] md:w-[80%] transition text-left text-50">{group.posts.length} {i18n(I18nKey.postsCount)}</div>
+                    <div class=" w-[70%] md:w-[80%] transition text-left text-50">{group.posts.length} {i18n(I18nKey.postsCount)}</div>
                 </div>
                 {group.posts.map(post => (
                     <a href={getPostUrlBySlug(post.slug)}
                        aria-label={post.data.title}
-                       class="pl-[.75rem] md:pl-[.88rem] group btn-plain block h-10 w-full rounded-lg hover:text-[initial]"
+                       class="group btn-plain block h-10 w-full rounded-lg hover:text-[initial]"
                     >
                         <div class="flex flex-row justify-start items-center h-full">
                             <!-- date -->
