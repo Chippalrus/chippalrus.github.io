@@ -60,29 +60,29 @@ function formatTag(tag: string[]) {
 
 ---
 
-<div class="card-base px-8 py-6 w-[440px] sm:w-[440px] md:w-[440px] lg:w-[560px] mx-auto border-2">
+<div class="card-base px-8 py-6 w-[380px] md:w-[440px] lg:w-[560px] mx-auto border-2">
     {
         groups.map(group => (
             <div>
                 <div class="flex flex-row w-full items-center h-[3.75rem]">
                     <div class=" w-[10%] transition text-2xl font-bold text-right text-75">{group.year}</div>
-                    <div class=" w-[10%] pl-6">
+                    <div class=" w-[10%] pl-[2.2rem] md:pl-[1.5rem]">
                         <div class="h-3 w-3 bg-none rounded-full outline outline-[var(--primary)] mx-auto -outline-offset-[2px] z-50 outline-3"></div>
                     </div>
-                    <div class="pl-6 w-[70%] md:w-[80%] transition text-left text-50">{group.posts.length} {i18n(I18nKey.postsCount)}</div>
+                    <div class="pl-[1.5rem] w-[70%] md:w-[80%] transition text-left text-50">{group.posts.length} {i18n(I18nKey.postsCount)}</div>
                 </div>
                 {group.posts.map(post => (
                     <a href={getPostUrlBySlug(post.slug)}
                        aria-label={post.data.title}
-                       class="pl-3 group btn-plain block h-10 w-full rounded-lg hover:text-[initial]"
+                       class="pl-[.75rem] md:pl-[.88rem] group btn-plain block h-10 w-full rounded-lg hover:text-[initial]"
                     >
                         <div class="flex flex-row justify-start items-center h-full">
                             <!-- date -->
-                            <div class=" w-[10%] transition text-sm text-right text-50">
+                            <div class="w-[15%] md:w-[10%] transition text-sm text-right text-50">
                                 {formatDate(post.data.published)}
                             </div>
                             <!-- dot and line -->
-                            <div class=" w-[10%] relative dash-line h-full flex items-center">
+                            <div class="w-[10%] relative dash-line h-full flex items-center">
                                 <div class="transition-all mx-auto w-1 h-1 rounded group-hover:h-5
                                 bg-[oklch(0.5_0.05_var(--hue))] group-hover:bg-[var(--primary)]
                                 outline outline-4 z-50
