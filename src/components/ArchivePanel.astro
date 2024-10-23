@@ -60,7 +60,7 @@ function formatTag(tag: string[]) {
 
 ---
 
-<div class="card-base px-8 py-6 w-[376px] md:w-[440px] lg:w-[560px] mx-auto border-2">
+<div class="card-base px-8 py-6 w-[380px] md:w-[560px] lg:w-[640px] mx-auto">
     {
         groups.map(group => (
             <div>
@@ -100,10 +100,10 @@ function formatTag(tag: string[]) {
                                     {post.data.title}
                             </div>
                             <!-- tag list -->
-                            <!--div class="hidden md:block md:w-[15%] text-left text-sm transition
+                            <div class="hidden md:block md:w-[50%] text-left text-sm transition
                             whitespace-nowrap overflow-ellipsis overflow-hidden
                             text-30"
-                            >{formatTag(post.data.tags)}</div-->
+                            >{formatTag(post.data.tags)}</div>
                         </div>
                     </a>
                 ))}
